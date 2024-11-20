@@ -35,7 +35,7 @@
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.PatientView = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -51,7 +51,7 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PatientView)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -130,15 +130,16 @@
             this.button10.Text = "Allergy History";
             this.button10.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // PatientView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(291, 88);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(813, 244);
-            this.dataGridView1.TabIndex = 8;
+            this.PatientView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.PatientView.Location = new System.Drawing.Point(291, 88);
+            this.PatientView.Name = "PatientView";
+            this.PatientView.RowHeadersWidth = 51;
+            this.PatientView.RowTemplate.Height = 24;
+            this.PatientView.Size = new System.Drawing.Size(813, 244);
+            this.PatientView.TabIndex = 8;
+            this.PatientView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PatientView_CellContentClick);
             // 
             // panel2
             // 
@@ -208,6 +209,7 @@
             this.button1.TabIndex = 5;
             this.button1.Text = "Select Patient";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button3
             // 
@@ -284,12 +286,13 @@
             this.ClientSize = new System.Drawing.Size(1372, 561);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.PatientView);
             this.Controls.Add(this.panel1);
             this.Name = "Select_Patient";
             this.Text = "Select_Patient";
+            this.Load += new System.EventHandler(this.Select_Patient_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PatientView)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -307,7 +310,7 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView PatientView;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button1;
