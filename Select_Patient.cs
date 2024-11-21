@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,6 +17,7 @@ namespace ITS245_FinalProject
     {
         MySqlConnection conn;
         DataTable dt;
+        int pid;
         public Select_Patient()
         {
             InitializeComponent();
@@ -23,7 +25,28 @@ namespace ITS245_FinalProject
 
         private void button1_Click(object sender, EventArgs e)
         {
+            using (conn = DBUtils.MakeConnection())
+            {
+                try
+                {
+                    MySqlCommand cmd = conn.CreateCommand();
+                    pid = Convert.ToInt32(txtPID.Text);
+                    cmd.CommandText = "SELECT PTLastName  FROM patientdemographics Where PatientID =" + pid;
+                    MySqlDataReader reader = cmd.ExecuteReader();
 
+                    while (reader.Read())
+                    {
+                        PatientLastName.Text = reader[0].ToString();
+                    }
+                    reader.Close();
+                    patientID.Text = txtPID.Text;
+                    pid = Convert.ToInt32(txtPID.Text);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("DB Operation failed to Patient Table", ex.Message);
+                }
+            }
         }
 
         private void Select_Patient_Load(object sender, EventArgs e)
@@ -46,37 +69,58 @@ namespace ITS245_FinalProject
 
         private void PatientView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            String s = "";
-            s = PatientView.CurrentRow.ToString();
-            MessageBox.Show("DB Connection Error: " +s);
+            int rowIndex = PatientView.CurrentCell.RowIndex;
+            patientID.Text = PatientView[0, rowIndex].FormattedValue.ToString();
+            PatientLastName.Text = PatientView[1, rowIndex].FormattedValue.ToString();
+            pid = Convert.ToInt32(patientID.Text);
+        }
 
-            s = s.Substring(0, s.IndexOf(" "));
-            MessageBox.Show("DB Connection Error: " + s);
-
-            string connString = "server=127.0.0.1;uid=root;pwd=FUCKTHEFRENCH;database=crm";
-            using (MySqlConnection conn = new MySqlConnection(connString))
+        private void button4_Click(object sender, EventArgs e)
+        {
+            using (conn = DBUtils.MakeConnection())
             {
                 try
                 {
-                    MySqlCommand cmd = new MySqlCommand(connString, conn);
-                    //MySqlCommand cmd = conn.CreateCommand();
-                    conn.Open();
+                    dt = DBUtils.GetPatients(conn);
+                    PatientView.DataSource = dt;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Connection Failed in GetAllPatients" + ex.Message);
+                }
 
-                    cmd.CommandText = "SELECT PhoneNumber " + "FROM customers WHERE FirstName = '" + s + "'";
+
+            }
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            using (conn = DBUtils.MakeConnection())
+            {
+                try
+                {
+                    string pLastName = selLastName.Text;
+                    PatientLastName.Text=pLastName;
+                    MySqlCommand cmd = conn.CreateCommand();
+                    cmd.CommandText = "SELECT PatientID  FROM patientdemographics Where PTLastName =" + "'"+pLastName+"'";
                     MySqlDataReader reader = cmd.ExecuteReader();
 
                     while (reader.Read())
                     {
-                        textBox3.Text = reader[0].ToString();
+                        pid = Convert.ToInt32(reader[0]);
+                        patientID.Text = pid.ToString();
                     }
                     reader.Close();
-                    //conn.Close();
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("DB Connection Error: " + ex.Message);
+                    MessageBox.Show("DB Operation failed to Patient Table", ex.Message);
                 }
-
             }
         }
     }
