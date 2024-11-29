@@ -42,5 +42,31 @@ namespace ITS245_FinalProject
             }
             return dt;
         }
+        public static DataTable GetPatientByIDSP(MySqlConnection conn, int pid)
+        {
+            MySqlCommand cmd = new MySqlCommand();
+            MySqlDataAdapter da = new MySqlDataAdapter();
+            DataTable dt = new DataTable();
+
+            try
+            {
+                cmd = new MySqlCommand("GetPatientByIDSP", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@pid", pid);
+                da.SelectCommand = cmd;
+                da.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Retrieve Patient by ID Error: " +
+                    ex.Message);
+            }
+            finally
+            {
+                cmd.Dispose();
+            }
+
+            return dt;
+        }
     }
 }
