@@ -99,11 +99,29 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBUtils.cs" />
+    <Compile Include="FamilyHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FamilyHistory.Designer.cs">
+      <DependentUpon>FamilyHistory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneralHistory.Designer.cs">
+      <DependentUpon>GeneralHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -113,6 +131,15 @@
     <Compile Include="Select_Patient.Designer.cs">
       <DependentUpon>Select_Patient.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FamilyHistory.resx">
+      <DependentUpon>FamilyHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneralHistory.resx">
+      <DependentUpon>GeneralHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
