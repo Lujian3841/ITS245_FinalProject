@@ -39,13 +39,7 @@
             this.PatientView = new System.Windows.Forms.DataGridView();
             this.button4 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
@@ -53,7 +47,15 @@
             this.textBox27 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PatientView)).BeginInit();
             this.panel2.SuspendLayout();
@@ -155,6 +157,7 @@
             this.PatientView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.PatientView.Size = new System.Drawing.Size(813, 151);
             this.PatientView.TabIndex = 11;
+            this.PatientView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PatientView_CellContentClick_1);
             // 
             // button4
             // 
@@ -165,10 +168,13 @@
             this.button4.TabIndex = 12;
             this.button4.Text = "Gell All Patients";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.textBox3);
             this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.label27);
             this.panel2.Controls.Add(this.label28);
@@ -183,78 +189,14 @@
             this.panel2.Size = new System.Drawing.Size(538, 197);
             this.panel2.TabIndex = 13;
             // 
-            // label4
+            // textBox1
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(165, 16);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(196, 32);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Allergen Info:";
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel3.Controls.Add(this.button5);
-            this.panel3.Controls.Add(this.button6);
-            this.panel3.Controls.Add(this.button12);
-            this.panel3.Controls.Add(this.button13);
-            this.panel3.Controls.Add(this.button14);
-            this.panel3.Location = new System.Drawing.Point(341, 550);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(684, 55);
-            this.panel3.TabIndex = 14;
-            // 
-            // button5
-            // 
-            this.button5.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(3, 3);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(130, 50);
-            this.button5.TabIndex = 0;
-            this.button5.Text = "ADD";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(547, 3);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(130, 50);
-            this.button6.TabIndex = 3;
-            this.button6.Text = "UNDO";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button12
-            // 
-            this.button12.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.Location = new System.Drawing.Point(139, 3);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(130, 50);
-            this.button12.TabIndex = 2;
-            this.button12.Text = "MODIFY";
-            this.button12.UseVisualStyleBackColor = true;
-            // 
-            // button13
-            // 
-            this.button13.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button13.Location = new System.Drawing.Point(275, 3);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(130, 50);
-            this.button13.TabIndex = 4;
-            this.button13.Text = "DELETE";
-            this.button13.UseVisualStyleBackColor = true;
-            // 
-            // button14
-            // 
-            this.button14.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button14.Location = new System.Drawing.Point(411, 3);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(130, 50);
-            this.button14.TabIndex = 5;
-            this.button14.Text = "SAVE";
-            this.button14.UseVisualStyleBackColor = true;
+            this.textBox1.Enabled = false;
+            this.textBox1.Location = new System.Drawing.Point(358, 116);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(97, 22);
+            this.textBox1.TabIndex = 69;
             // 
             // label27
             // 
@@ -288,6 +230,7 @@
             // 
             // textBox25
             // 
+            this.textBox25.Enabled = false;
             this.textBox25.Location = new System.Drawing.Point(171, 117);
             this.textBox25.Name = "textBox25";
             this.textBox25.Size = new System.Drawing.Size(87, 22);
@@ -295,6 +238,7 @@
             // 
             // textBox27
             // 
+            this.textBox27.Enabled = false;
             this.textBox27.Location = new System.Drawing.Point(349, 63);
             this.textBox27.Name = "textBox27";
             this.textBox27.Size = new System.Drawing.Size(87, 22);
@@ -312,17 +256,107 @@
             // 
             // textBox2
             // 
+            this.textBox2.Enabled = false;
             this.textBox2.Location = new System.Drawing.Point(171, 63);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(87, 22);
             this.textBox2.TabIndex = 61;
             // 
-            // textBox1
+            // label4
             // 
-            this.textBox1.Location = new System.Drawing.Point(358, 116);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(97, 22);
-            this.textBox1.TabIndex = 69;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(165, 16);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(196, 32);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Allergen Info:";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel3.Controls.Add(this.button5);
+            this.panel3.Controls.Add(this.button6);
+            this.panel3.Controls.Add(this.button12);
+            this.panel3.Controls.Add(this.button13);
+            this.panel3.Controls.Add(this.button14);
+            this.panel3.Location = new System.Drawing.Point(341, 550);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(684, 55);
+            this.panel3.TabIndex = 14;
+            // 
+            // button5
+            // 
+            this.button5.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(3, 3);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(130, 50);
+            this.button5.TabIndex = 0;
+            this.button5.Text = "ADD";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button6
+            // 
+            this.button6.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(547, 3);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(130, 50);
+            this.button6.TabIndex = 3;
+            this.button6.Text = "UNDO";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button12
+            // 
+            this.button12.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button12.Location = new System.Drawing.Point(139, 3);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(130, 50);
+            this.button12.TabIndex = 2;
+            this.button12.Text = "MODIFY";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
+            // 
+            // button13
+            // 
+            this.button13.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button13.Location = new System.Drawing.Point(275, 3);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(130, 50);
+            this.button13.TabIndex = 4;
+            this.button13.Text = "DELETE";
+            this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
+            // 
+            // button14
+            // 
+            this.button14.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button14.Location = new System.Drawing.Point(411, 3);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(130, 50);
+            this.button14.TabIndex = 5;
+            this.button14.Text = "SAVE";
+            this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Bahnschrift Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(168, 151);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(75, 36);
+            this.label2.TabIndex = 71;
+            this.label2.Text = "Allergen:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Enabled = false;
+            this.textBox3.Location = new System.Drawing.Point(262, 158);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(87, 22);
+            this.textBox3.TabIndex = 70;
             // 
             // AllergyHistory
             // 
@@ -375,5 +409,7 @@
         private System.Windows.Forms.TextBox textBox27;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }

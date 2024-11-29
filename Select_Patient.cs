@@ -123,5 +123,47 @@ namespace ITS245_FinalProject
                 }
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Select_Patient frm1 = new Select_Patient();
+            this.Hide();
+            frm1.ShowDialog();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            PatientDemographics frm1 = new PatientDemographics();
+            this.Hide();
+            frm1.ShowDialog();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            GeneralHistory frm1 = new GeneralHistory();
+            this.Hide();
+            frm1.ShowDialog();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            AllergyHistory frm1 = new AllergyHistory(pid);
+            this.Hide();
+            frm1.ShowDialog();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            FamilyHistory frm1 = new FamilyHistory();
+            this.Hide();
+            frm1.ShowDialog();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            Login frm1 = new Login();
+            this.Hide();
+            frm1.ShowDialog();
+        }
     }
 }

@@ -284,6 +284,7 @@
             this.button11.TabIndex = 6;
             this.button11.Text = "Login";
             this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // button2
             // 
@@ -294,6 +295,7 @@
             this.button2.TabIndex = 0;
             this.button2.Text = "Select Patient";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button7
             // 
@@ -304,6 +306,7 @@
             this.button7.TabIndex = 3;
             this.button7.Text = "Family History";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button8
             // 
@@ -314,6 +317,7 @@
             this.button8.TabIndex = 2;
             this.button8.Text = "Patient Demographics";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button9
             // 
@@ -324,6 +328,7 @@
             this.button9.TabIndex = 4;
             this.button9.Text = "General Medical History";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button10
             // 
@@ -334,6 +339,7 @@
             this.button10.TabIndex = 5;
             this.button10.Text = "Allergy History";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // Select_Patient
             // 
