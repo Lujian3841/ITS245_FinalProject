@@ -32,6 +32,11 @@ namespace ITS245_FinalProject
 
         }
 
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void GeneralHistory_Load(object sender, EventArgs e)
         {
             using (conn = DBUtils.MakeConnection())

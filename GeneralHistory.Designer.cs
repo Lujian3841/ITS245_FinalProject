@@ -71,6 +71,27 @@
             this.label7 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.txtMensesMonth = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
@@ -184,6 +205,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(816, 107);
             this.panel1.TabIndex = 10;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label1
             // 
@@ -465,6 +487,7 @@
             this.panel3.Size = new System.Drawing.Size(1192, 422);
             this.panel3.TabIndex = 12;
             // 
+            // comboBox1
             // label25
             // 
             this.label25.Font = new System.Drawing.Font("Bahnschrift Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -502,14 +525,24 @@
             // 
             // comboBox2
             // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(96, 56);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(90, 24);
+            this.comboBox1.TabIndex = 48;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(113, 26);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(90, 24);
             this.comboBox2.TabIndex = 49;
             // 
+            // textBox1
             // comboBox1
             // 
+            this.textBox1.Location = new System.Drawing.Point(796, 261);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(87, 22);
+            this.textBox1.TabIndex = 47;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(113, 56);
             this.comboBox1.Name = "comboBox1";
@@ -517,15 +550,31 @@
             this.comboBox1.TabIndex = 48;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
+            // label24
             // txtMensesMonth
             // 
+            this.label24.Font = new System.Drawing.Font("Bahnschrift Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(715, 331);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(75, 36);
+            this.label24.TabIndex = 46;
+            this.label24.Text = "HX Obtained By: ";
+            this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.txtMensesMonth.Location = new System.Drawing.Point(796, 257);
             this.txtMensesMonth.Name = "txtMensesMonth";
             this.txtMensesMonth.Size = new System.Drawing.Size(87, 22);
             this.txtMensesMonth.TabIndex = 47;
             // 
+            // label23
             // label24
             // 
+            this.label23.Font = new System.Drawing.Font("Bahnschrift Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(715, 289);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(75, 36);
+            this.label23.TabIndex = 45;
+            this.label23.Text = "Menses Frequency:";
+            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label24.Font = new System.Drawing.Font("Bahnschrift Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.Location = new System.Drawing.Point(519, 346);
             this.label24.Name = "label24";
@@ -534,8 +583,16 @@
             this.label24.Text = "HX Obtained By: ";
             this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label22
             // label23
             // 
+            this.label22.Font = new System.Drawing.Font("Bahnschrift Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(715, 246);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(75, 36);
+            this.label22.TabIndex = 44;
+            this.label22.Text = "Menses Monthly:";
+            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label23.Font = new System.Drawing.Font("Bahnschrift Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.Location = new System.Drawing.Point(711, 323);
             this.label23.Name = "label23";
@@ -544,17 +601,8 @@
             this.label23.Text = "Menses Frequency:";
             this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label22
-            // 
-            this.label22.Font = new System.Drawing.Font("Bahnschrift Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(715, 246);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(75, 36);
-            this.label22.TabIndex = 44;
-            this.label22.Text = "Menses Monthly Y:";
-            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label21
+            // label22
             // 
             this.label21.Font = new System.Drawing.Font("Bahnschrift Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.Location = new System.Drawing.Point(715, 207);
@@ -563,8 +611,16 @@
             this.label21.TabIndex = 43;
             this.label21.Text = "LMP Status:";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label22.Font = new System.Drawing.Font("Bahnschrift Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(715, 246);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(75, 36);
+            this.label22.TabIndex = 44;
+            this.label22.Text = "Menses Monthly Y:";
+            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label20
+            // label21
             // 
             this.label20.Font = new System.Drawing.Font("Bahnschrift Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.Location = new System.Drawing.Point(523, 305);
@@ -573,18 +629,34 @@
             this.label20.TabIndex = 42;
             this.label20.Text = "Number of Children:";
             this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label21.Font = new System.Drawing.Font("Bahnschrift Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(715, 207);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(75, 36);
+            this.label21.TabIndex = 43;
+            this.label21.Text = "LMP Status:";
+            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label19
+            // label20
             // 
             this.label19.Font = new System.Drawing.Font("Bahnschrift Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(549, 279);
+            this.label19.Location = new System.Drawing.Point(542, 271);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(28, 26);
             this.label19.TabIndex = 41;
             this.label19.Text = "RH:";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label20.Font = new System.Drawing.Font("Bahnschrift Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(523, 305);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(75, 36);
+            this.label20.TabIndex = 42;
+            this.label20.Text = "Number of Children:";
+            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label18
+            // label19
             // 
             this.label18.Font = new System.Drawing.Font("Bahnschrift Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.Location = new System.Drawing.Point(523, 243);
@@ -603,7 +675,43 @@
             this.label17.TabIndex = 39;
             this.label17.Text = "Dietary:";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label19.Font = new System.Drawing.Font("Bahnschrift Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(549, 279);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(28, 26);
+            this.label19.TabIndex = 41;
+            this.label19.Text = "RH:";
+            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label16
+            // label18
+            // 
+            this.label16.Font = new System.Drawing.Font("Bahnschrift Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(715, 114);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(75, 36);
+            this.label16.TabIndex = 38;
+            this.label16.Text = "Drug Duration:";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label18.Font = new System.Drawing.Font("Bahnschrift Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(523, 243);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(75, 36);
+            this.label18.TabIndex = 40;
+            this.label18.Text = "Blood Type:";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label17
+            // 
+            this.label17.Font = new System.Drawing.Font("Bahnschrift Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(523, 214);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(75, 36);
+            this.label17.TabIndex = 39;
+            this.label17.Text = "Dietary:";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label14
             // label16
             // 
             this.label16.Font = new System.Drawing.Font("Bahnschrift Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
