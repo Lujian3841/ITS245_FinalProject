@@ -123,5 +123,20 @@ namespace ITS245_FinalProject
                 }
             }
         }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

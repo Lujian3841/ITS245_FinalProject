@@ -30,35 +30,38 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.btnSelPat = new System.Windows.Forms.Button();
+            this.btnFamily = new System.Windows.Forms.Button();
+            this.btnPatientDem = new System.Windows.Forms.Button();
+            this.btnGenHist = new System.Windows.Forms.Button();
+            this.btnAllergy = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnUndo = new System.Windows.Forms.Button();
+            this.btnModify = new System.Windows.Forms.Button();
+            this.btnDel = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.familyListBox = new System.Windows.Forms.ListBox();
+            this.comboPatID = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtRelation = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtAlive = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtLivesWPat = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtDisorder = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.txtDisorderType = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.comboFamID = new System.Windows.Forms.ComboBox();
+            this.btnRelation = new System.Windows.Forms.Button();
+            this.btnDisorder = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -67,12 +70,12 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.button11);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button7);
-            this.panel1.Controls.Add(this.button8);
-            this.panel1.Controls.Add(this.button9);
-            this.panel1.Controls.Add(this.button10);
+            this.panel1.Controls.Add(this.btnLogin);
+            this.panel1.Controls.Add(this.btnSelPat);
+            this.panel1.Controls.Add(this.btnFamily);
+            this.panel1.Controls.Add(this.btnPatientDem);
+            this.panel1.Controls.Add(this.btnGenHist);
+            this.panel1.Controls.Add(this.btnAllergy);
             this.panel1.Location = new System.Drawing.Point(233, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(816, 105);
@@ -88,155 +91,146 @@
             this.label1.Text = "Patient Display";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button11
+            // btnLogin
             // 
-            this.button11.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.Location = new System.Drawing.Point(683, 3);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(130, 50);
-            this.button11.TabIndex = 6;
-            this.button11.Text = "Login";
-            this.button11.UseVisualStyleBackColor = true;
+            this.btnLogin.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.Location = new System.Drawing.Point(683, 3);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(130, 50);
+            this.btnLogin.TabIndex = 6;
+            this.btnLogin.Text = "Login";
+            this.btnLogin.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnSelPat
             // 
-            this.button2.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(3, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(130, 50);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Select Patient";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnSelPat.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSelPat.Location = new System.Drawing.Point(3, 3);
+            this.btnSelPat.Name = "btnSelPat";
+            this.btnSelPat.Size = new System.Drawing.Size(130, 50);
+            this.btnSelPat.TabIndex = 0;
+            this.btnSelPat.Text = "Select Patient";
+            this.btnSelPat.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // btnFamily
             // 
-            this.button7.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(547, 3);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(130, 50);
-            this.button7.TabIndex = 3;
-            this.button7.Text = "Family History";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btnFamily.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFamily.Location = new System.Drawing.Point(547, 3);
+            this.btnFamily.Name = "btnFamily";
+            this.btnFamily.Size = new System.Drawing.Size(130, 50);
+            this.btnFamily.TabIndex = 3;
+            this.btnFamily.Text = "Family History";
+            this.btnFamily.UseVisualStyleBackColor = true;
             // 
-            // button8
+            // btnPatientDem
             // 
-            this.button8.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(139, 3);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(130, 50);
-            this.button8.TabIndex = 2;
-            this.button8.Text = "Patient Demographics";
-            this.button8.UseVisualStyleBackColor = true;
+            this.btnPatientDem.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPatientDem.Location = new System.Drawing.Point(139, 3);
+            this.btnPatientDem.Name = "btnPatientDem";
+            this.btnPatientDem.Size = new System.Drawing.Size(130, 50);
+            this.btnPatientDem.TabIndex = 2;
+            this.btnPatientDem.Text = "Patient Demographics";
+            this.btnPatientDem.UseVisualStyleBackColor = true;
             // 
-            // button9
+            // btnGenHist
             // 
-            this.button9.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(275, 3);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(130, 50);
-            this.button9.TabIndex = 4;
-            this.button9.Text = "General Medical History";
-            this.button9.UseVisualStyleBackColor = true;
+            this.btnGenHist.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenHist.Location = new System.Drawing.Point(275, 3);
+            this.btnGenHist.Name = "btnGenHist";
+            this.btnGenHist.Size = new System.Drawing.Size(130, 50);
+            this.btnGenHist.TabIndex = 4;
+            this.btnGenHist.Text = "General Medical History";
+            this.btnGenHist.UseVisualStyleBackColor = true;
             // 
-            // button10
+            // btnAllergy
             // 
-            this.button10.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Location = new System.Drawing.Point(411, 3);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(130, 50);
-            this.button10.TabIndex = 5;
-            this.button10.Text = "Allergy History";
-            this.button10.UseVisualStyleBackColor = true;
+            this.btnAllergy.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAllergy.Location = new System.Drawing.Point(411, 3);
+            this.btnAllergy.Name = "btnAllergy";
+            this.btnAllergy.Size = new System.Drawing.Size(130, 50);
+            this.btnAllergy.TabIndex = 5;
+            this.btnAllergy.Text = "Allergy History";
+            this.btnAllergy.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button5);
-            this.panel2.Controls.Add(this.button6);
+            this.panel2.Controls.Add(this.btnAdd);
+            this.panel2.Controls.Add(this.btnUndo);
+            this.panel2.Controls.Add(this.btnModify);
+            this.panel2.Controls.Add(this.btnDel);
+            this.panel2.Controls.Add(this.btnSave);
             this.panel2.Location = new System.Drawing.Point(295, 622);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(684, 55);
             this.panel2.TabIndex = 7;
             // 
-            // button1
+            // btnAdd
             // 
-            this.button1.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(3, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 50);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "ADD";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAdd.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.Location = new System.Drawing.Point(3, 3);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(130, 50);
+            this.btnAdd.TabIndex = 0;
+            this.btnAdd.Text = "ADD";
+            this.btnAdd.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnUndo
             // 
-            this.button4.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(547, 3);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(130, 50);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "UNDO";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnUndo.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUndo.Location = new System.Drawing.Point(547, 3);
+            this.btnUndo.Name = "btnUndo";
+            this.btnUndo.Size = new System.Drawing.Size(130, 50);
+            this.btnUndo.TabIndex = 3;
+            this.btnUndo.Text = "UNDO";
+            this.btnUndo.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnModify
             // 
-            this.button3.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(139, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(130, 50);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "MODIFY";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnModify.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModify.Location = new System.Drawing.Point(139, 3);
+            this.btnModify.Name = "btnModify";
+            this.btnModify.Size = new System.Drawing.Size(130, 50);
+            this.btnModify.TabIndex = 2;
+            this.btnModify.Text = "MODIFY";
+            this.btnModify.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btnDel
             // 
-            this.button5.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(275, 3);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(130, 50);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "DELETE";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnDel.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDel.Location = new System.Drawing.Point(275, 3);
+            this.btnDel.Name = "btnDel";
+            this.btnDel.Size = new System.Drawing.Size(130, 50);
+            this.btnDel.TabIndex = 4;
+            this.btnDel.Text = "DELETE";
+            this.btnDel.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // btnSave
             // 
-            this.button6.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(411, 3);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(130, 50);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "SAVE";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnSave.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Location = new System.Drawing.Point(411, 3);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(130, 50);
+            this.btnSave.TabIndex = 5;
+            this.btnSave.Text = "SAVE";
+            this.btnSave.UseVisualStyleBackColor = true;
             // 
-            // listBox1
+            // familyListBox
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(570, 123);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(130, 52);
-            this.listBox1.TabIndex = 9;
+            this.familyListBox.FormattingEnabled = true;
+            this.familyListBox.ItemHeight = 16;
+            this.familyListBox.Location = new System.Drawing.Point(570, 123);
+            this.familyListBox.Name = "familyListBox";
+            this.familyListBox.Size = new System.Drawing.Size(130, 116);
+            this.familyListBox.TabIndex = 9;
             // 
-            // label8
+            // comboPatID
             // 
-            this.label8.Font = new System.Drawing.Font("Bahnschrift Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(233, 124);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(75, 36);
-            this.label8.TabIndex = 32;
-            this.label8.Text = "FamilyID:";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(314, 159);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(87, 24);
-            this.comboBox1.TabIndex = 50;
+            this.comboPatID.FormattingEnabled = true;
+            this.comboPatID.Location = new System.Drawing.Point(314, 159);
+            this.comboPatID.Name = "comboPatID";
+            this.comboPatID.Size = new System.Drawing.Size(87, 24);
+            this.comboPatID.TabIndex = 50;
+            this.comboPatID.SelectedIndexChanged += new System.EventHandler(this.comboPatID_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -251,19 +245,19 @@
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Bahnschrift Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(298, 270);
+            this.label3.Location = new System.Drawing.Point(291, 270);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 36);
             this.label3.TabIndex = 52;
             this.label3.Text = "Name:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox1
+            // txtName
             // 
-            this.textBox1.Location = new System.Drawing.Point(341, 277);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(161, 22);
-            this.textBox1.TabIndex = 51;
+            this.txtName.Location = new System.Drawing.Point(341, 277);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(161, 22);
+            this.txtName.TabIndex = 51;
             // 
             // label4
             // 
@@ -275,46 +269,46 @@
             this.label4.Text = "Relation:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox2
+            // txtRelation
             // 
-            this.textBox2.Location = new System.Drawing.Point(341, 309);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(161, 22);
-            this.textBox2.TabIndex = 53;
+            this.txtRelation.Location = new System.Drawing.Point(341, 309);
+            this.txtRelation.Name = "txtRelation";
+            this.txtRelation.Size = new System.Drawing.Size(161, 22);
+            this.txtRelation.TabIndex = 53;
             // 
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Bahnschrift Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(298, 330);
+            this.label5.Location = new System.Drawing.Point(291, 330);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(44, 36);
             this.label5.TabIndex = 56;
             this.label5.Text = "Alive:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox3
+            // txtAlive
             // 
-            this.textBox3.Location = new System.Drawing.Point(341, 337);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(161, 22);
-            this.textBox3.TabIndex = 55;
+            this.txtAlive.Location = new System.Drawing.Point(341, 337);
+            this.txtAlive.Name = "txtAlive";
+            this.txtAlive.Size = new System.Drawing.Size(161, 22);
+            this.txtAlive.TabIndex = 55;
             // 
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Bahnschrift Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(265, 363);
+            this.label6.Location = new System.Drawing.Point(272, 363);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(70, 59);
             this.label6.TabIndex = 58;
             this.label6.Text = "Lives With Patient:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox4
+            // txtLivesWPat
             // 
-            this.textBox4.Location = new System.Drawing.Point(341, 381);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(161, 22);
-            this.textBox4.TabIndex = 57;
+            this.txtLivesWPat.Location = new System.Drawing.Point(341, 381);
+            this.txtLivesWPat.Name = "txtLivesWPat";
+            this.txtLivesWPat.Size = new System.Drawing.Size(161, 22);
+            this.txtLivesWPat.TabIndex = 57;
             // 
             // label7
             // 
@@ -326,12 +320,12 @@
             this.label7.Text = "Major Disorder:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox5
+            // txtDisorder
             // 
-            this.textBox5.Location = new System.Drawing.Point(763, 302);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(161, 22);
-            this.textBox5.TabIndex = 59;
+            this.txtDisorder.Location = new System.Drawing.Point(763, 302);
+            this.txtDisorder.Name = "txtDisorder";
+            this.txtDisorder.Size = new System.Drawing.Size(161, 22);
+            this.txtDisorder.TabIndex = 59;
             // 
             // label9
             // 
@@ -343,20 +337,60 @@
             this.label9.Text = "Specific Type Disorder";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox6
+            // txtDisorderType
             // 
-            this.textBox6.Location = new System.Drawing.Point(763, 347);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(161, 22);
-            this.textBox6.TabIndex = 61;
+            this.txtDisorderType.Location = new System.Drawing.Point(763, 347);
+            this.txtDisorderType.Name = "txtDisorderType";
+            this.txtDisorderType.Size = new System.Drawing.Size(161, 22);
+            this.txtDisorderType.TabIndex = 61;
             // 
-            // comboBox2
+            // button1
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(314, 129);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(87, 24);
-            this.comboBox2.TabIndex = 63;
+            this.button1.Location = new System.Drawing.Point(534, 506);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(192, 48);
+            this.button1.TabIndex = 64;
+            this.button1.Text = "Populate Information";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label8
+            // 
+            this.label8.Font = new System.Drawing.Font("Bahnschrift Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(233, 124);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(75, 36);
+            this.label8.TabIndex = 32;
+            this.label8.Text = "FamilyID:";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // comboFamID
+            // 
+            this.comboFamID.FormattingEnabled = true;
+            this.comboFamID.Location = new System.Drawing.Point(314, 129);
+            this.comboFamID.Name = "comboFamID";
+            this.comboFamID.Size = new System.Drawing.Size(87, 24);
+            this.comboFamID.TabIndex = 63;
+            // 
+            // btnRelation
+            // 
+            this.btnRelation.Location = new System.Drawing.Point(706, 142);
+            this.btnRelation.Name = "btnRelation";
+            this.btnRelation.Size = new System.Drawing.Size(95, 41);
+            this.btnRelation.TabIndex = 65;
+            this.btnRelation.Text = "Relation Data";
+            this.btnRelation.UseVisualStyleBackColor = true;
+            this.btnRelation.Click += new System.EventHandler(this.btnRelation_Click);
+            // 
+            // btnDisorder
+            // 
+            this.btnDisorder.Location = new System.Drawing.Point(706, 189);
+            this.btnDisorder.Name = "btnDisorder";
+            this.btnDisorder.Size = new System.Drawing.Size(95, 41);
+            this.btnDisorder.TabIndex = 66;
+            this.btnDisorder.Text = "Disorder Data";
+            this.btnDisorder.UseVisualStyleBackColor = true;
+            this.btnDisorder.Click += new System.EventHandler(this.btnDisorder_Click);
             // 
             // FamilyHistory
             // 
@@ -364,27 +398,31 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(1257, 689);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.btnDisorder);
+            this.Controls.Add(this.btnRelation);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.comboFamID);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.txtDisorderType);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.txtDisorder);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtLivesWPat);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtAlive);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtRelation);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.comboPatID);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.familyListBox);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Name = "FamilyHistory";
             this.Text = "FamilyHistory";
+            this.Load += new System.EventHandler(this.FamilyHistory_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -396,34 +434,37 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Button btnSelPat;
+        private System.Windows.Forms.Button btnFamily;
+        private System.Windows.Forms.Button btnPatientDem;
+        private System.Windows.Forms.Button btnGenHist;
+        private System.Windows.Forms.Button btnAllergy;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnUndo;
+        private System.Windows.Forms.Button btnModify;
+        private System.Windows.Forms.Button btnDel;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.ListBox familyListBox;
+        private System.Windows.Forms.ComboBox comboPatID;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtRelation;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtAlive;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtLivesWPat;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtDisorder;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.TextBox txtDisorderType;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox comboFamID;
+        private System.Windows.Forms.Button btnRelation;
+        private System.Windows.Forms.Button btnDisorder;
     }
 }

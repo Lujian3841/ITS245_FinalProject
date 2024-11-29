@@ -68,5 +68,33 @@ namespace ITS245_FinalProject
 
             return dt;
         }
+
+        public static DataTable GetPatientByIDGenHistSP(MySqlConnection conn, int pid)
+        {
+            MySqlCommand cmd = new MySqlCommand();
+            MySqlDataAdapter da = new MySqlDataAdapter();
+            DataTable dt = new DataTable();
+
+            try
+            {
+                cmd = new MySqlCommand("GetPatientByIDGenHistSP", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@pid", pid);
+                da.SelectCommand = cmd;
+                da.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Retrieve Patient GenHist: " + ex.Message);
+            }
+            finally
+            {
+
+                cmd.Dispose();
+            }
+
+
+            return dt;
+        }
     }
 }

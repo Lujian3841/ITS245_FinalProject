@@ -28,38 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button12 = new System.Windows.Forms.Button();
+            this.btnSubmitLogin = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnUndo = new System.Windows.Forms.Button();
+            this.btnModify = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.btnSelPat = new System.Windows.Forms.Button();
+            this.btnFamily = new System.Windows.Forms.Button();
+            this.btnPatientDem = new System.Windows.Forms.Button();
+            this.btnGenHist = new System.Windows.Forms.Button();
+            this.btnAllergy = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtUser = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button12
+            // btnSubmitLogin
             // 
-            this.button12.Location = new System.Drawing.Point(535, 366);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(153, 44);
-            this.button12.TabIndex = 18;
-            this.button12.Text = "Submit Credentials";
-            this.button12.UseVisualStyleBackColor = true;
+            this.btnSubmitLogin.Location = new System.Drawing.Point(535, 366);
+            this.btnSubmitLogin.Name = "btnSubmitLogin";
+            this.btnSubmitLogin.Size = new System.Drawing.Size(153, 44);
+            this.btnSubmitLogin.TabIndex = 18;
+            this.btnSubmitLogin.Text = "Submit Credentials";
+            this.btnSubmitLogin.UseVisualStyleBackColor = true;
+            this.btnSubmitLogin.Click += new System.EventHandler(this.btnSubmitLogin_Click);
             // 
             // label4
             // 
@@ -74,76 +75,76 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button5);
-            this.panel2.Controls.Add(this.button6);
+            this.panel2.Controls.Add(this.btnAdd);
+            this.panel2.Controls.Add(this.btnUndo);
+            this.panel2.Controls.Add(this.btnModify);
+            this.panel2.Controls.Add(this.btnDelete);
+            this.panel2.Controls.Add(this.btnSave);
             this.panel2.Location = new System.Drawing.Point(268, 623);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(684, 55);
             this.panel2.TabIndex = 17;
             // 
-            // button1
+            // btnAdd
             // 
-            this.button1.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(3, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 50);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "ADD";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAdd.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.Location = new System.Drawing.Point(3, 3);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(130, 50);
+            this.btnAdd.TabIndex = 0;
+            this.btnAdd.Text = "ADD";
+            this.btnAdd.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnUndo
             // 
-            this.button4.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(547, 3);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(130, 50);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "UNDO";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnUndo.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUndo.Location = new System.Drawing.Point(547, 3);
+            this.btnUndo.Name = "btnUndo";
+            this.btnUndo.Size = new System.Drawing.Size(130, 50);
+            this.btnUndo.TabIndex = 3;
+            this.btnUndo.Text = "UNDO";
+            this.btnUndo.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnModify
             // 
-            this.button3.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(139, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(130, 50);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "MODIFY";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnModify.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModify.Location = new System.Drawing.Point(139, 3);
+            this.btnModify.Name = "btnModify";
+            this.btnModify.Size = new System.Drawing.Size(130, 50);
+            this.btnModify.TabIndex = 2;
+            this.btnModify.Text = "MODIFY";
+            this.btnModify.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btnDelete
             // 
-            this.button5.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(275, 3);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(130, 50);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "DELETE";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnDelete.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Location = new System.Drawing.Point(275, 3);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(130, 50);
+            this.btnDelete.TabIndex = 4;
+            this.btnDelete.Text = "DELETE";
+            this.btnDelete.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // btnSave
             // 
-            this.button6.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(411, 3);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(130, 50);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "SAVE";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnSave.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Location = new System.Drawing.Point(411, 3);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(130, 50);
+            this.btnSave.TabIndex = 5;
+            this.btnSave.Text = "SAVE";
+            this.btnSave.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.button11);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button7);
-            this.panel1.Controls.Add(this.button8);
-            this.panel1.Controls.Add(this.button9);
-            this.panel1.Controls.Add(this.button10);
+            this.panel1.Controls.Add(this.btnLogin);
+            this.panel1.Controls.Add(this.btnSelPat);
+            this.panel1.Controls.Add(this.btnFamily);
+            this.panel1.Controls.Add(this.btnPatientDem);
+            this.panel1.Controls.Add(this.btnGenHist);
+            this.panel1.Controls.Add(this.btnAllergy);
             this.panel1.Location = new System.Drawing.Point(207, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(816, 107);
@@ -159,65 +160,65 @@
             this.label1.Text = "Patient Display";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button11
+            // btnLogin
             // 
-            this.button11.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.Location = new System.Drawing.Point(683, 3);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(130, 50);
-            this.button11.TabIndex = 6;
-            this.button11.Text = "Login";
-            this.button11.UseVisualStyleBackColor = true;
+            this.btnLogin.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.Location = new System.Drawing.Point(683, 3);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(130, 50);
+            this.btnLogin.TabIndex = 6;
+            this.btnLogin.Text = "Login";
+            this.btnLogin.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnSelPat
             // 
-            this.button2.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(3, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(130, 50);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Select Patient";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnSelPat.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSelPat.Location = new System.Drawing.Point(3, 3);
+            this.btnSelPat.Name = "btnSelPat";
+            this.btnSelPat.Size = new System.Drawing.Size(130, 50);
+            this.btnSelPat.TabIndex = 0;
+            this.btnSelPat.Text = "Select Patient";
+            this.btnSelPat.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // btnFamily
             // 
-            this.button7.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(547, 3);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(130, 50);
-            this.button7.TabIndex = 3;
-            this.button7.Text = "Family History";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btnFamily.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFamily.Location = new System.Drawing.Point(547, 3);
+            this.btnFamily.Name = "btnFamily";
+            this.btnFamily.Size = new System.Drawing.Size(130, 50);
+            this.btnFamily.TabIndex = 3;
+            this.btnFamily.Text = "Family History";
+            this.btnFamily.UseVisualStyleBackColor = true;
             // 
-            // button8
+            // btnPatientDem
             // 
-            this.button8.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(139, 3);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(130, 50);
-            this.button8.TabIndex = 2;
-            this.button8.Text = "Patient Demographics";
-            this.button8.UseVisualStyleBackColor = true;
+            this.btnPatientDem.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPatientDem.Location = new System.Drawing.Point(139, 3);
+            this.btnPatientDem.Name = "btnPatientDem";
+            this.btnPatientDem.Size = new System.Drawing.Size(130, 50);
+            this.btnPatientDem.TabIndex = 2;
+            this.btnPatientDem.Text = "Patient Demographics";
+            this.btnPatientDem.UseVisualStyleBackColor = true;
             // 
-            // button9
+            // btnGenHist
             // 
-            this.button9.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(275, 3);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(130, 50);
-            this.button9.TabIndex = 4;
-            this.button9.Text = "General Medical History";
-            this.button9.UseVisualStyleBackColor = true;
+            this.btnGenHist.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenHist.Location = new System.Drawing.Point(275, 3);
+            this.btnGenHist.Name = "btnGenHist";
+            this.btnGenHist.Size = new System.Drawing.Size(130, 50);
+            this.btnGenHist.TabIndex = 4;
+            this.btnGenHist.Text = "General Medical History";
+            this.btnGenHist.UseVisualStyleBackColor = true;
             // 
-            // button10
+            // btnAllergy
             // 
-            this.button10.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Location = new System.Drawing.Point(411, 3);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(130, 50);
-            this.button10.TabIndex = 5;
-            this.button10.Text = "Allergy History";
-            this.button10.UseVisualStyleBackColor = true;
+            this.btnAllergy.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAllergy.Location = new System.Drawing.Point(411, 3);
+            this.btnAllergy.Name = "btnAllergy";
+            this.btnAllergy.Size = new System.Drawing.Size(130, 50);
+            this.btnAllergy.TabIndex = 5;
+            this.btnAllergy.Text = "Allergy History";
+            this.btnAllergy.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -239,19 +240,20 @@
             this.label2.Text = "Password:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox2
+            // txtPassword
             // 
-            this.textBox2.Location = new System.Drawing.Point(491, 338);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(251, 22);
-            this.textBox2.TabIndex = 12;
+            this.txtPassword.Location = new System.Drawing.Point(491, 338);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(251, 22);
+            this.txtPassword.TabIndex = 12;
             // 
-            // textBox1
+            // txtUser
             // 
-            this.textBox1.Location = new System.Drawing.Point(491, 310);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(251, 22);
-            this.textBox1.TabIndex = 11;
+            this.txtUser.Location = new System.Drawing.Point(491, 310);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(251, 22);
+            this.txtUser.TabIndex = 11;
+            this.txtUser.TextChanged += new System.EventHandler(this.txtUser_TextChanged);
             // 
             // Login
             // 
@@ -259,16 +261,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(1219, 690);
-            this.Controls.Add(this.button12);
+            this.Controls.Add(this.btnSubmitLogin);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.txtUser);
             this.Name = "Login";
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.Login_Load);
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -278,25 +281,25 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button btnSubmitLogin;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnUndo;
+        private System.Windows.Forms.Button btnModify;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Button btnSelPat;
+        private System.Windows.Forms.Button btnFamily;
+        private System.Windows.Forms.Button btnPatientDem;
+        private System.Windows.Forms.Button btnGenHist;
+        private System.Windows.Forms.Button btnAllergy;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.TextBox txtUser;
     }
 }
