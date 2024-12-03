@@ -98,6 +98,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Allergen.cs" />
     <Compile Include="AllergyHistory.cs">
       <SubType>Form</SubType>
     </Compile>

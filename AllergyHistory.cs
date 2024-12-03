@@ -18,6 +18,8 @@ namespace ITS245_FinalProject
         DataTable dt;
         int pid;
         string allergy;
+        int returnedRecs = 0;
+        int screenmode = 1;
         public AllergyHistory(int PID)
         {
             InitializeComponent();
@@ -46,7 +48,7 @@ namespace ITS245_FinalProject
         {
             int rowIndex = PatientView.CurrentCell.RowIndex;
             allergy = PatientView[0, rowIndex].FormattedValue.ToString();
-            textBox3.Text = PatientView[0, rowIndex].FormattedValue.ToString();
+            txt_allergen.Text = PatientView[0, rowIndex].FormattedValue.ToString();
             textBox2.Text = PatientView[1, rowIndex].FormattedValue.ToString();
             textBox27.Text = PatientView[2, rowIndex].FormattedValue.ToString();
             textBox25.Text = PatientView[3, rowIndex].FormattedValue.ToString();
@@ -79,32 +81,86 @@ namespace ITS245_FinalProject
             textBox25.Enabled = true;
             textBox27.Enabled = true;
             textBox1.Enabled = true;
+            txt_allergen.Enabled = true;
             panel2.BackColor = Color.Blue;
-
+            screenmode = 2;
+            button14.Enabled = true;
+            textBox2.Text = "";
+            textBox25.Text = "";
+            textBox27.Text = "";
+            textBox1.Text = "";
+            txt_allergen.Text = "";
         }
 
         private void button12_Click(object sender, EventArgs e)
         {
-            textBox2.Enabled = true;
             textBox25.Enabled = true;
             textBox27.Enabled = true;
             textBox1.Enabled = true;
             panel2.BackColor = Color.Blue;
+            screenmode = 3;
+            button14.Enabled = true;
+            txt_allergen.Enabled= true;
         }
 
         private void button14_Click(object sender, EventArgs e)
         {
-            using (conn = DBUtils.MakeConnection())
+            if(screenmode == 2)
             {
-                try
+                if (!string.IsNullOrEmpty(txt_allergen.Text))
                 {
-                    MySqlCommand cmd = conn.CreateCommand();
-                    cmd.CommandText = "commit";
-                    cmd.ExecuteNonQuery();
+                    Allergen a = new Allergen();
+                    a.AllergenID = Convert.ToInt32(textBox2.Text);
+                    a.allergen = txt_allergen.Text;
+                    a.AllergenStart = textBox27.Text;
+                    a.AllergenEnd = textBox25.Text;
+                    a.AllergenDescription = textBox1.Text;
+                    a.PID = pid;
+                    try
+                    {
+                        using (conn = DBUtils.MakeConnection())
+                        {
+                            int recsReturned = DBUtils.InsertAllergenSP(conn, a);
+                            MessageBox.Show("Inserted " + recsReturned + " records into Patient table!");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Insert Patient Failed.  Message=" + ex.Message);
+                    }
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show("Save Operation failed to Patient Table", ex.Message);
+                    MessageBox.Show("Please Enter an Allergen!");
+                }
+            }
+            else if(screenmode == 3)
+            {
+                if (!string.IsNullOrEmpty(txt_allergen.Text))
+                {
+                    Allergen a = new Allergen();
+                    a.AllergenID = Convert.ToInt32(textBox2.Text);
+                    a.allergen = txt_allergen.Text;
+                    a.AllergenStart = textBox27.Text;
+                    a.AllergenEnd = textBox25.Text;
+                    a.AllergenDescription = textBox1.Text;
+                    a.PID = pid;
+                    try
+                    {
+                        using (conn = DBUtils.MakeConnection())
+                        {
+                            int recsReturned = DBUtils.UpdateAllergySP(conn, a);
+                            MessageBox.Show("Updated " + recsReturned + " records into Patient table!");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Update Patient Failed.  Message=" + ex.Message);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please Enter an Allergen!");
                 }
             }
             textBox2.Enabled = false;
@@ -112,6 +168,9 @@ namespace ITS245_FinalProject
             textBox27.Enabled = false;
             textBox1.Enabled = false;
             panel2.BackColor = Color.Gray;
+            screenmode = 1;
+            button14.Enabled = false;
+            txt_allergen.Enabled = false;
             using (conn = DBUtils.MakeConnection())
             {
                 try
@@ -135,7 +194,7 @@ namespace ITS245_FinalProject
         {
             int rowIndex = PatientView.CurrentCell.RowIndex;
             allergy = PatientView[0, rowIndex].FormattedValue.ToString();
-            textBox3.Text = PatientView[0, rowIndex].FormattedValue.ToString();
+            txt_allergen.Text = PatientView[0, rowIndex].FormattedValue.ToString();
             textBox2.Text = PatientView[1, rowIndex].FormattedValue.ToString();
             textBox27.Text = PatientView[2, rowIndex].FormattedValue.ToString();
             textBox25.Text = PatientView[3, rowIndex].FormattedValue.ToString();
@@ -178,19 +237,23 @@ namespace ITS245_FinalProject
 
         private void button6_Click(object sender, EventArgs e)
         {
-            using (conn = DBUtils.MakeConnection())
-            {
-                try
-                {
-                    MySqlCommand cmd = conn.CreateCommand();
-                    cmd.CommandText = "rollback";
-                    cmd.ExecuteNonQuery();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Undo Operation failed to Patient Table", ex.Message);
-                }
-            }
+            int rowIndex = PatientView.CurrentCell.RowIndex;
+            allergy = PatientView[0, rowIndex].FormattedValue.ToString();
+            txt_allergen.Text = PatientView[0, rowIndex].FormattedValue.ToString();
+            textBox2.Text = PatientView[1, rowIndex].FormattedValue.ToString();
+            textBox27.Text = PatientView[2, rowIndex].FormattedValue.ToString();
+            textBox25.Text = PatientView[3, rowIndex].FormattedValue.ToString();
+            textBox1.Text = PatientView[4, rowIndex].FormattedValue.ToString();
+            textBox2.Enabled = false;
+            textBox25.Enabled = false;
+            textBox27.Enabled = false;
+            textBox1.Enabled = false;
+            panel2.BackColor = Color.Gray;
+            screenmode = 1;
+            button14.Enabled = false;
+            txt_allergen.Enabled = false;
         }
+
+       
     }
-}
+    }

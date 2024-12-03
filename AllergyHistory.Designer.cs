@@ -55,7 +55,7 @@
             this.button13 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txt_allergen = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PatientView)).BeginInit();
             this.panel2.SuspendLayout();
@@ -174,7 +174,7 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.textBox3);
+            this.panel2.Controls.Add(this.txt_allergen);
             this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.label27);
             this.panel2.Controls.Add(this.label28);
@@ -192,10 +192,10 @@
             // textBox1
             // 
             this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(358, 116);
+            this.textBox1.Location = new System.Drawing.Point(349, 101);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(97, 22);
+            this.textBox1.Size = new System.Drawing.Size(186, 51);
             this.textBox1.TabIndex = 69;
             // 
             // label27
@@ -331,6 +331,7 @@
             // 
             // button14
             // 
+            this.button14.Enabled = false;
             this.button14.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button14.Location = new System.Drawing.Point(411, 3);
             this.button14.Name = "button14";
@@ -343,20 +344,20 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Bahnschrift Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(168, 151);
+            this.label2.Location = new System.Drawing.Point(173, 151);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 36);
+            this.label2.Size = new System.Drawing.Size(85, 36);
             this.label2.TabIndex = 71;
             this.label2.Text = "Allergen:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox3
+            // txt_allergen
             // 
-            this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(262, 158);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(87, 22);
-            this.textBox3.TabIndex = 70;
+            this.txt_allergen.Enabled = false;
+            this.txt_allergen.Location = new System.Drawing.Point(264, 158);
+            this.txt_allergen.Name = "txt_allergen";
+            this.txt_allergen.Size = new System.Drawing.Size(87, 22);
+            this.txt_allergen.TabIndex = 70;
             // 
             // AllergyHistory
             // 
@@ -410,6 +411,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txt_allergen;
     }
 }

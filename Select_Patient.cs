@@ -124,20 +124,9 @@ namespace ITS245_FinalProject
             }
         }
 
-        private void button11_Click(object sender, EventArgs e)
-        {
-            
-        }
+      
 
-        private void button9_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            
-        }
+      
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -177,6 +166,13 @@ namespace ITS245_FinalProject
         private void button11_Click(object sender, EventArgs e)
         {
             Login frm1 = new Login();
+            this.Hide();
+            frm1.ShowDialog();
+        }
+
+        private void button10_Click_1(object sender, EventArgs e)
+        {
+            AllergyHistory frm1 = new AllergyHistory(pid);
             this.Hide();
             frm1.ShowDialog();
         }

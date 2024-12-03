@@ -43,6 +43,8 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label30 = new System.Windows.Forms.Label();
+            this.textBox28 = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
@@ -99,8 +101,6 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label30 = new System.Windows.Forms.Label();
-            this.textBox28 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -150,6 +150,7 @@
             this.button2.TabIndex = 0;
             this.button2.Text = "Select Patient";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button7
             // 
@@ -190,6 +191,7 @@
             this.button10.TabIndex = 5;
             this.button10.Text = "Allergy History";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // panel2
             // 
@@ -319,6 +321,23 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1192, 422);
             this.panel3.TabIndex = 13;
+            // 
+            // label30
+            // 
+            this.label30.Font = new System.Drawing.Font("Bahnschrift Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(18, 98);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(75, 36);
+            this.label30.TabIndex = 62;
+            this.label30.Text = "Patient Age:";
+            this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textBox28
+            // 
+            this.textBox28.Location = new System.Drawing.Point(99, 105);
+            this.textBox28.Name = "textBox28";
+            this.textBox28.Size = new System.Drawing.Size(87, 22);
+            this.textBox28.TabIndex = 61;
             // 
             // label27
             // 
@@ -797,23 +816,6 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(87, 22);
             this.textBox3.TabIndex = 2;
-            // 
-            // label30
-            // 
-            this.label30.Font = new System.Drawing.Font("Bahnschrift Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(18, 98);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(75, 36);
-            this.label30.TabIndex = 62;
-            this.label30.Text = "Patient Age:";
-            this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // textBox28
-            // 
-            this.textBox28.Location = new System.Drawing.Point(99, 105);
-            this.textBox28.Name = "textBox28";
-            this.textBox28.Size = new System.Drawing.Size(87, 22);
-            this.textBox28.TabIndex = 61;
             // 
             // PatientDemographics
             // 

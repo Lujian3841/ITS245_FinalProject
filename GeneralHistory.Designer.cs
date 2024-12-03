@@ -71,7 +71,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            //this.textBox1 = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
@@ -539,10 +539,10 @@
             // textBox1
             // comboBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(796, 261);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(87, 22);
-            this.textBox1.TabIndex = 47;
+            //this.textBox1.Location = new System.Drawing.Point(796, 261);
+            //this.textBox1.Name = "textBox1";
+            //this.textBox1.Size = new System.Drawing.Size(87, 22);
+            //this.textBox1.TabIndex = 47;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(113, 56);
             this.comboBox1.Name = "comboBox1";

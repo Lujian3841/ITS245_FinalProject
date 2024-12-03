@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Runtime.InteropServices.ComTypes;
 namespace ITS245_FinalProject
 {
     internal class DBUtils
@@ -120,5 +121,54 @@ namespace ITS245_FinalProject
             }
             return dt;
         }
+        public static int InsertAllergenSP(MySqlConnection conn, Allergen a)
+        {
+            int returnedRecs = 0;
+
+
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand("InsertAllergySP", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@AllergyID", a.AllergenID);
+                cmd.Parameters.AddWithValue("@pid", a.PID);
+                cmd.Parameters.AddWithValue("@allergen", a.allergen);
+                cmd.Parameters.AddWithValue("@StartDate", a.AllergenStart);
+                cmd.Parameters.AddWithValue("@EndDate", a.AllergenEnd);
+                cmd.Parameters.AddWithValue("@descrip", a.AllergenDescription);
+                returnedRecs = cmd.ExecuteNonQuery();
+                return returnedRecs;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Insert of Allergen Failed!  Message=" + ex.Message);
+            }
+            return 0;
+        }
+        public static int UpdateAllergySP(MySqlConnection conn, Allergen a)
+        {
+            int returnedRecs = 0;
+
+
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand("UpdateAllergySP", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@allergyID", a.AllergenID);
+                cmd.Parameters.AddWithValue("@pid", a.PID);
+                cmd.Parameters.AddWithValue("@allergen", a.allergen);
+                cmd.Parameters.AddWithValue("@StartDate", a.AllergenStart);
+                cmd.Parameters.AddWithValue("@EndDate", a.AllergenEnd);
+                cmd.Parameters.AddWithValue("@descrip", a.AllergenDescription);
+                returnedRecs = cmd.ExecuteNonQuery();
+                return returnedRecs;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Update of Allergen Failed!  Message=" + ex.Message);
+            }
+            return 0;
+        }
+
     }
 }

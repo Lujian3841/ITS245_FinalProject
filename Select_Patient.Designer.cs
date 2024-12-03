@@ -47,96 +47,18 @@
             this.label6 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
             this.button11 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PatientView)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel1.Controls.Add(this.button11);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button7);
-            this.panel1.Controls.Add(this.button8);
-            this.panel1.Controls.Add(this.button9);
-            this.panel1.Controls.Add(this.button10);
-            this.panel1.Location = new System.Drawing.Point(288, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(816, 55);
-            this.panel1.TabIndex = 7;
-            // 
-            // button11
-            // 
-            this.button11.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.Location = new System.Drawing.Point(683, 3);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(130, 50);
-            this.button11.TabIndex = 6;
-            this.button11.Text = "Login";
-            this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(3, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(130, 50);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Select Patient";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(547, 3);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(130, 50);
-            this.button7.TabIndex = 3;
-            this.button7.Text = "Family History";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // button8
-            // 
-            this.button8.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(139, 3);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(130, 50);
-            this.button8.TabIndex = 2;
-            this.button8.Text = "Patient Demographics";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.button9.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(275, 3);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(130, 50);
-            this.button9.TabIndex = 4;
-            this.button9.Text = "General Medical History";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
-            // 
-            // button10
-            // 
-            this.button10.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Location = new System.Drawing.Point(411, 3);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(130, 50);
-            this.button10.TabIndex = 5;
-            this.button10.Text = "Allergy History";
-            this.button10.UseVisualStyleBackColor = true;
             // 
             // PatientView
             // 
@@ -327,6 +249,91 @@
             this.button4.Text = "Gell All Patients";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel1.Controls.Add(this.button11);
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.button7);
+            this.panel1.Controls.Add(this.button8);
+            this.panel1.Controls.Add(this.button9);
+            this.panel1.Controls.Add(this.button10);
+            this.panel1.Location = new System.Drawing.Point(288, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(816, 55);
+            this.panel1.TabIndex = 7;
+            // 
+            // button11
+            // 
+            this.button11.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button11.Location = new System.Drawing.Point(683, 3);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(130, 50);
+            this.button11.TabIndex = 6;
+            this.button11.Text = "Login";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(3, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(130, 50);
+            this.button2.TabIndex = 0;
+            this.button2.Text = "Select Patient";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Location = new System.Drawing.Point(547, 3);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(130, 50);
+            this.button7.TabIndex = 3;
+            this.button7.Text = "Family History";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button8
+            // 
+            this.button8.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.Location = new System.Drawing.Point(139, 3);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(130, 50);
+            this.button8.TabIndex = 2;
+            this.button8.Text = "Patient Demographics";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // button9
+            // 
+            this.button9.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.Location = new System.Drawing.Point(275, 3);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(130, 50);
+            this.button9.TabIndex = 4;
+            this.button9.Text = "General Medical History";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // button10
+            // 
+            this.button10.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button10.Location = new System.Drawing.Point(411, 3);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(130, 50);
+            this.button10.TabIndex = 5;
+            this.button10.Text = "Allergy History";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click_1);
+            // 
+            // label7
+            // 
+            this.label7.Location = new System.Drawing.Point(0, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(100, 23);
+            this.label7.TabIndex = 0;
             // 
             // Select_Patient
             // 
