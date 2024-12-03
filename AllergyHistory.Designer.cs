@@ -29,16 +29,20 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txt_pid = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button11 = new System.Windows.Forms.Button();
+            this.btn_login = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btn_famhist = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
+            this.btn_genHistory = new System.Windows.Forms.Button();
+            this.btn_allergy = new System.Windows.Forms.Button();
             this.PatientView = new System.Windows.Forms.DataGridView();
             this.button4 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txt_allergen = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
@@ -54,8 +58,6 @@
             this.button12 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txt_allergen = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PatientView)).BeginInit();
             this.panel2.SuspendLayout();
@@ -65,17 +67,37 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.txt_pid);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.button11);
+            this.panel1.Controls.Add(this.btn_login);
             this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button7);
+            this.panel1.Controls.Add(this.btn_famhist);
             this.panel1.Controls.Add(this.button8);
-            this.panel1.Controls.Add(this.button9);
-            this.panel1.Controls.Add(this.button10);
+            this.panel1.Controls.Add(this.btn_genHistory);
+            this.panel1.Controls.Add(this.btn_allergy);
             this.panel1.Location = new System.Drawing.Point(275, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(816, 105);
             this.panel1.TabIndex = 10;
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Bahnschrift Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(13, 56);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(85, 36);
+            this.label3.TabIndex = 64;
+            this.label3.Text = "Patient ID:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txt_pid
+            // 
+            this.txt_pid.Enabled = false;
+            this.txt_pid.Location = new System.Drawing.Point(104, 63);
+            this.txt_pid.Name = "txt_pid";
+            this.txt_pid.Size = new System.Drawing.Size(87, 22);
+            this.txt_pid.TabIndex = 63;
             // 
             // label1
             // 
@@ -87,15 +109,16 @@
             this.label1.Text = "Patient Display";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button11
+            // btn_login
             // 
-            this.button11.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.Location = new System.Drawing.Point(683, 3);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(130, 50);
-            this.button11.TabIndex = 6;
-            this.button11.Text = "Login";
-            this.button11.UseVisualStyleBackColor = true;
+            this.btn_login.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_login.Location = new System.Drawing.Point(683, 3);
+            this.btn_login.Name = "btn_login";
+            this.btn_login.Size = new System.Drawing.Size(130, 50);
+            this.btn_login.TabIndex = 6;
+            this.btn_login.Text = "Login";
+            this.btn_login.UseVisualStyleBackColor = true;
+            this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
             // 
             // button2
             // 
@@ -106,16 +129,18 @@
             this.button2.TabIndex = 0;
             this.button2.Text = "Select Patient";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button7
+            // btn_famhist
             // 
-            this.button7.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(547, 3);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(130, 50);
-            this.button7.TabIndex = 3;
-            this.button7.Text = "Family History";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btn_famhist.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_famhist.Location = new System.Drawing.Point(547, 3);
+            this.btn_famhist.Name = "btn_famhist";
+            this.btn_famhist.Size = new System.Drawing.Size(130, 50);
+            this.btn_famhist.TabIndex = 3;
+            this.btn_famhist.Text = "Family History";
+            this.btn_famhist.UseVisualStyleBackColor = true;
+            this.btn_famhist.Click += new System.EventHandler(this.btn_famhist_Click);
             // 
             // button8
             // 
@@ -126,26 +151,29 @@
             this.button8.TabIndex = 2;
             this.button8.Text = "Patient Demographics";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
-            // button9
+            // btn_genHistory
             // 
-            this.button9.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(275, 3);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(130, 50);
-            this.button9.TabIndex = 4;
-            this.button9.Text = "General Medical History";
-            this.button9.UseVisualStyleBackColor = true;
+            this.btn_genHistory.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_genHistory.Location = new System.Drawing.Point(275, 3);
+            this.btn_genHistory.Name = "btn_genHistory";
+            this.btn_genHistory.Size = new System.Drawing.Size(130, 50);
+            this.btn_genHistory.TabIndex = 4;
+            this.btn_genHistory.Text = "General Medical History";
+            this.btn_genHistory.UseVisualStyleBackColor = true;
+            this.btn_genHistory.Click += new System.EventHandler(this.btn_genHistory_Click);
             // 
-            // button10
+            // btn_allergy
             // 
-            this.button10.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Location = new System.Drawing.Point(411, 3);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(130, 50);
-            this.button10.TabIndex = 5;
-            this.button10.Text = "Allergy History";
-            this.button10.UseVisualStyleBackColor = true;
+            this.btn_allergy.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_allergy.Location = new System.Drawing.Point(411, 3);
+            this.btn_allergy.Name = "btn_allergy";
+            this.btn_allergy.Size = new System.Drawing.Size(130, 50);
+            this.btn_allergy.TabIndex = 5;
+            this.btn_allergy.Text = "Allergy History";
+            this.btn_allergy.UseVisualStyleBackColor = true;
+            this.btn_allergy.Click += new System.EventHandler(this.btn_allergy_Click);
             // 
             // PatientView
             // 
@@ -188,6 +216,24 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(538, 197);
             this.panel2.TabIndex = 13;
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Bahnschrift Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(173, 151);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(85, 36);
+            this.label2.TabIndex = 71;
+            this.label2.Text = "Allergen:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txt_allergen
+            // 
+            this.txt_allergen.Enabled = false;
+            this.txt_allergen.Location = new System.Drawing.Point(264, 158);
+            this.txt_allergen.Name = "txt_allergen";
+            this.txt_allergen.Size = new System.Drawing.Size(87, 22);
+            this.txt_allergen.TabIndex = 70;
             // 
             // textBox1
             // 
@@ -341,24 +387,6 @@
             this.button14.UseVisualStyleBackColor = true;
             this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("Bahnschrift Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(173, 151);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 36);
-            this.label2.TabIndex = 71;
-            this.label2.Text = "Allergen:";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txt_allergen
-            // 
-            this.txt_allergen.Enabled = false;
-            this.txt_allergen.Location = new System.Drawing.Point(264, 158);
-            this.txt_allergen.Name = "txt_allergen";
-            this.txt_allergen.Size = new System.Drawing.Size(87, 22);
-            this.txt_allergen.TabIndex = 70;
-            // 
             // AllergyHistory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -374,6 +402,7 @@
             this.Text = "AllergyHistory";
             this.Load += new System.EventHandler(this.AllergyHistory_Load);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PatientView)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -386,12 +415,12 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button btn_login;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btn_famhist;
         private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button btn_genHistory;
+        private System.Windows.Forms.Button btn_allergy;
         private System.Windows.Forms.DataGridView PatientView;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Panel panel2;
@@ -412,5 +441,7 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_allergen;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txt_pid;
     }
 }

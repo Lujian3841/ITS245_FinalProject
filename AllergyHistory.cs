@@ -24,6 +24,7 @@ namespace ITS245_FinalProject
         {
             InitializeComponent();
             this.pid = PID;
+            txt_pid.Text = pid.ToString();
             //btnGetAllPatients_Click(this, new EventArgs());
             using (conn = DBUtils.MakeConnection())
             {
@@ -254,6 +255,46 @@ namespace ITS245_FinalProject
             txt_allergen.Enabled = false;
         }
 
-       
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Select_Patient frm1 = new Select_Patient();
+            this.Hide();
+            frm1.ShowDialog();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            PatientDemographics frm1 = new PatientDemographics(pid);
+            this.Hide();
+            frm1.ShowDialog();
+        }
+
+        private void btn_genHistory_Click(object sender, EventArgs e)
+        {
+            GeneralHistory frm1 = new GeneralHistory();
+            this.Hide();
+            frm1.ShowDialog();
+        }
+
+        private void btn_allergy_Click(object sender, EventArgs e)
+        {
+            AllergyHistory frm1 = new AllergyHistory(pid);
+            this.Hide();
+            frm1.ShowDialog();
+        }
+
+        private void btn_famhist_Click(object sender, EventArgs e)
+        {
+            FamilyHistory frm1 = new FamilyHistory();
+            this.Hide();
+            frm1.ShowDialog();
+        }
+
+        private void btn_login_Click(object sender, EventArgs e)
+        {
+            Login frm1 = new Login();
+            this.Hide();
+            frm1.ShowDialog();
+        }
     }
     }

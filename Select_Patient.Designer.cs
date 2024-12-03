@@ -284,6 +284,7 @@
             this.button2.TabIndex = 0;
             this.button2.Text = "Select Patient";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // button7
             // 
@@ -305,6 +306,7 @@
             this.button8.TabIndex = 2;
             this.button8.Text = "Patient Demographics";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click_1);
             // 
             // button9
             // 

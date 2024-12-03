@@ -160,6 +160,7 @@ namespace ITS245_FinalProject
                 cmd.Parameters.AddWithValue("@StartDate", a.AllergenStart);
                 cmd.Parameters.AddWithValue("@EndDate", a.AllergenEnd);
                 cmd.Parameters.AddWithValue("@descrip", a.AllergenDescription);
+                cmd.Prepare();
                 returnedRecs = cmd.ExecuteNonQuery();
                 return returnedRecs;
             }
@@ -168,6 +169,13 @@ namespace ITS245_FinalProject
                 MessageBox.Show("Update of Allergen Failed!  Message=" + ex.Message);
             }
             return 0;
+        }
+        public static void fillDemo(MySqlConnection conn, int pid)
+        {
+            try
+            {
+             
+            }
         }
 
     }
