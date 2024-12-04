@@ -124,6 +124,10 @@ namespace ITS245_FinalProject
             }
         }
 
+      
+
+      
+
         private void button2_Click(object sender, EventArgs e)
         {
             Select_Patient frm1 = new Select_Patient();
@@ -133,7 +137,7 @@ namespace ITS245_FinalProject
 
         private void button8_Click(object sender, EventArgs e)
         {
-            PatientDemographics frm1 = new PatientDemographics();
+            PatientDemographics frm1 = new PatientDemographics(pid);
             this.Hide();
             frm1.ShowDialog();
         }
@@ -164,6 +168,25 @@ namespace ITS245_FinalProject
             Login frm1 = new Login();
             this.Hide();
             frm1.ShowDialog();
+        }
+
+        private void button10_Click_1(object sender, EventArgs e)
+        {
+            AllergyHistory frm1 = new AllergyHistory(pid);
+            this.Hide();
+            frm1.ShowDialog();
+        }
+
+        private void button8_Click_1(object sender, EventArgs e)
+        {
+            PatientDemographics frm1 = new PatientDemographics(pid);
+            this.Hide();
+            frm1.ShowDialog();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

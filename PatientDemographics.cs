@@ -12,9 +12,26 @@ namespace ITS245_FinalProject
 {
     public partial class PatientDemographics : Form
     {
-        public PatientDemographics()
+        int PID;
+        public PatientDemographics(int pid)
         {
             InitializeComponent();
+            PID = pid;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_add_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
