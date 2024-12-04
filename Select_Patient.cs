@@ -124,21 +124,6 @@ namespace ITS245_FinalProject
             }
         }
 
-        private void button11_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             Select_Patient frm1 = new Select_Patient();
@@ -155,7 +140,7 @@ namespace ITS245_FinalProject
 
         private void button9_Click(object sender, EventArgs e)
         {
-            GeneralHistory frm1 = new GeneralHistory();
+            GeneralHistory frm1 = new GeneralHistory(pid);
             this.Hide();
             frm1.ShowDialog();
         }
@@ -169,7 +154,7 @@ namespace ITS245_FinalProject
 
         private void button7_Click(object sender, EventArgs e)
         {
-            FamilyHistory frm1 = new FamilyHistory();
+            FamilyHistory frm1 = new FamilyHistory(pid);
             this.Hide();
             frm1.ShowDialog();
         }

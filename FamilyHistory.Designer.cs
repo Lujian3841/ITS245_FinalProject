@@ -90,6 +90,7 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "Patient Display";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnLogin
             // 
@@ -159,7 +160,7 @@
             this.panel2.Controls.Add(this.btnModify);
             this.panel2.Controls.Add(this.btnDel);
             this.panel2.Controls.Add(this.btnSave);
-            this.panel2.Location = new System.Drawing.Point(295, 622);
+            this.panel2.Location = new System.Drawing.Point(294, 560);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(684, 55);
             this.panel2.TabIndex = 7;
@@ -397,7 +398,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(1257, 689);
+            this.ClientSize = new System.Drawing.Size(1233, 622);
             this.Controls.Add(this.btnDisorder);
             this.Controls.Add(this.btnRelation);
             this.Controls.Add(this.button1);
