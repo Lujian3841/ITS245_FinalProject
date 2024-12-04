@@ -383,7 +383,7 @@ namespace ITS245_FinalProject
 
         private void btnPatientDem_Click(object sender, EventArgs e)
         {
-            PatientDemographics form = new PatientDemographics();
+            PatientDemographics form = new PatientDemographics(pid);
             this.Close();
             form.ShowDialog();
         }
