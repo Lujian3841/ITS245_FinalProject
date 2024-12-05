@@ -184,6 +184,7 @@ namespace ITS245_FinalProject
                 da.SelectCommand = cmd;
                 da.Fill(dt);
             }
+<<<<<<< HEAD
             catch (Exception ex)
             {
                 MessageBox.Show("Retrieve All Patients Demographics Error: Error = " + ex.Message);
@@ -193,6 +194,12 @@ namespace ITS245_FinalProject
                 cmd.Dispose();
             }
             return dt;
+=======
+            catch
+            {
+
+            }
+>>>>>>> cbe6702029cccd00de5596719c7d6bde999cded4
         }
 
     }

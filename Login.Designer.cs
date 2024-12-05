@@ -37,7 +37,6 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnSelPat = new System.Windows.Forms.Button();
             this.btnFamily = new System.Windows.Forms.Button();
@@ -54,7 +53,7 @@
             // 
             // btnSubmitLogin
             // 
-            this.btnSubmitLogin.Location = new System.Drawing.Point(535, 366);
+            this.btnSubmitLogin.Location = new System.Drawing.Point(536, 314);
             this.btnSubmitLogin.Name = "btnSubmitLogin";
             this.btnSubmitLogin.Size = new System.Drawing.Size(153, 44);
             this.btnSubmitLogin.TabIndex = 18;
@@ -65,7 +64,7 @@
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Bahnschrift", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(507, 256);
+            this.label4.Location = new System.Drawing.Point(508, 204);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(215, 51);
             this.label4.TabIndex = 16;
@@ -138,7 +137,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Controls.Add(this.btnSelPat);
             this.panel1.Controls.Add(this.btnFamily);
@@ -147,18 +145,8 @@
             this.panel1.Controls.Add(this.btnAllergy);
             this.panel1.Location = new System.Drawing.Point(207, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(816, 107);
+            this.panel1.Size = new System.Drawing.Size(816, 58);
             this.panel1.TabIndex = 15;
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Bahnschrift", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(187, 56);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(439, 45);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Patient Display";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnLogin
             // 
@@ -223,7 +211,7 @@
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Bahnschrift Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(410, 308);
+            this.label3.Location = new System.Drawing.Point(411, 256);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(75, 26);
             this.label3.TabIndex = 14;
@@ -233,7 +221,7 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Bahnschrift Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(410, 337);
+            this.label2.Location = new System.Drawing.Point(411, 285);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 23);
             this.label2.TabIndex = 13;
@@ -242,14 +230,14 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(491, 338);
+            this.txtPassword.Location = new System.Drawing.Point(492, 286);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(251, 22);
             this.txtPassword.TabIndex = 12;
             // 
             // txtUser
             // 
-            this.txtUser.Location = new System.Drawing.Point(491, 310);
+            this.txtUser.Location = new System.Drawing.Point(492, 258);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(251, 22);
             this.txtUser.TabIndex = 11;
@@ -290,7 +278,6 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnSelPat;
         private System.Windows.Forms.Button btnFamily;
