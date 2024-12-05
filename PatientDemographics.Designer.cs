@@ -43,8 +43,7 @@
             this.btn_delete = new System.Windows.Forms.Button();
             this.btn_save = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label30 = new System.Windows.Forms.Label();
-            this.txt_age = new System.Windows.Forms.TextBox();
+            this.txt_pid = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
@@ -100,7 +99,6 @@
             this.txt_emnum = new System.Windows.Forms.TextBox();
             this.txt_pnum = new System.Windows.Forms.TextBox();
             this.txt_mr = new System.Windows.Forms.TextBox();
-            this.txt_pid = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -261,8 +259,6 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.AliceBlue;
             this.panel3.Controls.Add(this.txt_pid);
-            this.panel3.Controls.Add(this.label30);
-            this.panel3.Controls.Add(this.txt_age);
             this.panel3.Controls.Add(this.label27);
             this.panel3.Controls.Add(this.label28);
             this.panel3.Controls.Add(this.label29);
@@ -323,22 +319,13 @@
             this.panel3.Size = new System.Drawing.Size(1192, 422);
             this.panel3.TabIndex = 13;
             // 
-            // label30
+            // txt_pid
             // 
-            this.label30.Font = new System.Drawing.Font("Bahnschrift Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(18, 98);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(75, 36);
-            this.label30.TabIndex = 62;
-            this.label30.Text = "Patient Age:";
-            this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txt_age
-            // 
-            this.txt_age.Location = new System.Drawing.Point(99, 105);
-            this.txt_age.Name = "txt_age";
-            this.txt_age.Size = new System.Drawing.Size(87, 22);
-            this.txt_age.TabIndex = 61;
+            this.txt_pid.Enabled = false;
+            this.txt_pid.Location = new System.Drawing.Point(99, 56);
+            this.txt_pid.Name = "txt_pid";
+            this.txt_pid.Size = new System.Drawing.Size(87, 22);
+            this.txt_pid.TabIndex = 63;
             // 
             // label27
             // 
@@ -810,14 +797,6 @@
             this.txt_mr.Size = new System.Drawing.Size(87, 22);
             this.txt_mr.TabIndex = 2;
             // 
-            // txt_pid
-            // 
-            this.txt_pid.Enabled = false;
-            this.txt_pid.Location = new System.Drawing.Point(99, 56);
-            this.txt_pid.Name = "txt_pid";
-            this.txt_pid.Size = new System.Drawing.Size(87, 22);
-            this.txt_pid.TabIndex = 63;
-            // 
             // PatientDemographics
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -909,8 +888,6 @@
         private System.Windows.Forms.TextBox txt_kinRelation;
         private System.Windows.Forms.TextBox txt_kindID;
         private System.Windows.Forms.TextBox txt_entered;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.TextBox txt_age;
         private System.Windows.Forms.TextBox txt_pid;
     }
 }

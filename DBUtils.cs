@@ -154,7 +154,7 @@ namespace ITS245_FinalProject
             {
                 MySqlCommand cmd = new MySqlCommand("UpdateAllergySP", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@allergyID", a.AllergenID);
+                cmd.Parameters.AddWithValue("@AID", a.AllergenID);
                 cmd.Parameters.AddWithValue("@pid", a.PID);
                 cmd.Parameters.AddWithValue("@allergen", a.allergen);
                 cmd.Parameters.AddWithValue("@StartDate", a.AllergenStart);
@@ -170,12 +170,29 @@ namespace ITS245_FinalProject
             }
             return 0;
         }
-        public static void fillDemo(MySqlConnection conn, int pid)
+        public static DataTable GetAllPatientDemographicsSP(MySqlConnection conn, int pid)
         {
+            MySqlCommand cmd = new MySqlCommand();
+            MySqlDataAdapter da = new MySqlDataAdapter();
+            DataTable dt = new DataTable();
+
             try
             {
-             
+                cmd = new MySqlCommand("GetAllDemoSP", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@pid", pid);
+                da.SelectCommand = cmd;
+                da.Fill(dt);
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Retrieve All Patients Demographics Error: Error = " + ex.Message);
+            }
+            finally
+            {
+                cmd.Dispose();
+            }
+            return dt;
         }
 
     }
