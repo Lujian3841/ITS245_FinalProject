@@ -17,7 +17,7 @@ namespace ITS245_FinalProject
     {
         int screenMode = 1;
         int pid;
-        string patientinfo;
+       
 
         MySqlConnection conn;
         public GeneralHistory()
@@ -85,7 +85,7 @@ namespace ITS245_FinalProject
         private void button12_Click(object sender, EventArgs e)
         {
             MySqlConnection conn = DBUtils.MakeConnection();
-            pid = Convert.ToInt16(comboBox1.Text);
+            
             using (conn)
             {
                 string query = "SELECT * FROM generalmedicalhistory WHERE GeneralMedicalHistoryID = @pid and deleted = 0";
@@ -141,7 +141,7 @@ namespace ITS245_FinalProject
 
         }
 
-        public void lockScreen()
+        private void lockScreen()
         {
             panel3.BackColor = Color.LightSlateGray;
             txtAlc.Enabled = false;
@@ -169,7 +169,7 @@ namespace ITS245_FinalProject
 
             screenMode = 1;
         }
-        public void unlockScreen()
+        private void unlockScreen()
         {
             panel3.BackColor = Color.AliceBlue;
             txtAlc.Enabled = true;
@@ -322,6 +322,7 @@ namespace ITS245_FinalProject
                 }
 
                 lockScreen();
+                this.Refresh();
             }
         }
 
@@ -356,43 +357,93 @@ namespace ITS245_FinalProject
         private void btnLogin_Click(object sender, EventArgs e)
         {
             Login form = new Login();
-            this.Close();
+            this.Dispose();
             form.ShowDialog();
         }
 
         private void btnFamily_Click(object sender, EventArgs e)
         {
             FamilyHistory form = new FamilyHistory(pid);
-            this.Close(); 
+            this.Dispose(); 
             form.ShowDialog();
         }
 
         private void btnAllergy_Click(object sender, EventArgs e)
         {
             AllergyHistory form = new AllergyHistory(pid);
-            this.Close();
+            this.Dispose();
             form.ShowDialog();
         }
 
         private void btnGenHist_Click(object sender, EventArgs e)
         {
             GeneralHistory form = new GeneralHistory(pid);
-            this.Close();
+            this.Dispose();
             form.ShowDialog();
         }
 
         private void btnPatientDem_Click(object sender, EventArgs e)
         {
             PatientDemographics form = new PatientDemographics(pid);
-            this.Close();
+            this.Dispose();
             form.ShowDialog();
         }
 
         private void btnSelPat_Click(object sender, EventArgs e)
         {
             Select_Patient form = new Select_Patient();
-            this.Close();
+            this.Dispose();
             form.ShowDialog();
+        }
+
+        private void btnUndo_Click(object sender, EventArgs e)
+        {
+            MySqlConnection conn = DBUtils.MakeConnection();
+
+            using (conn)
+            {
+                string query = "SELECT * FROM generalmedicalhistory WHERE GeneralMedicalHistoryID = @pid and deleted = 0";
+
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@pid", pid);
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            txtMaritalStat.Text = reader["MaritalStatus"].ToString();
+                            txtEducation.Text = reader["Education"].ToString();
+                            txtBehavioral.Text = reader["BehavioralHistory"].ToString();
+                            txt_Tobacco.Text = reader["Tobacco"].ToString();
+                            txt_TobaccoDur.Text = reader["TobaccoDuraton"].ToString();
+                            txt_TobaccoQuant.Text = reader["TobaccoQuantity"].ToString();
+                            txtAlc.Text = reader["Alcohol"].ToString();
+                            txtAlcDur.Text = reader["AlcoholDuration"].ToString();
+                            txtAlcQuant.Text = reader["AlcoholQuantity"].ToString();
+                            txtDrug.Text = reader["Drug"].ToString();
+                            txtDrugType.Text = reader["DrugType"].ToString();
+                            txtDrugDur.Text = reader["DrugDuration"].ToString();
+                            txtDiet.Text = reader["Dietary"].ToString();
+                            txtBloodType.Text = reader["BloodType"].ToString();
+                            txtRH.Text = reader["Rh"].ToString();
+                            txtChildrenNum.Text = reader["NumberOfChildren"].ToString();
+                            txtLMPStat.Text = reader["LMPStatus"].ToString();
+                            int mensesYes = Convert.ToInt32(reader["MensesMonthlyYes"]);
+                            int mensesNo = Convert.ToInt32(reader["MensesMonthlyNo"]);
+                            txtMensesMonth.Text = mensesYes.ToString();
+                            txtMensesNo.Text = mensesNo.ToString();
+                            txtMenseFreq.Text = reader["MensesFreq"].ToString();
+                            txtHx.Text = reader["HxObtainedBy"].ToString();
+                            txtHistNotes.Text = reader["MedicalHistoryNotes"].ToString();
+                        }
+                        else
+                        {
+                            MessageBox.Show("No data found for the selected ID.");
+                        }
+                    }
+                }
+            }
+            lockScreen();
         }
     }
 }

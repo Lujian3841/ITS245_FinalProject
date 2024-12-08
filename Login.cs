@@ -67,7 +67,7 @@ namespace ITS245_FinalProject
                             string dbUser = reader["Username"].ToString();
                             string dbPassword = reader["Password"].ToString();
 
-                            if (dbUser == username &&  dbPassword == password)
+                            if (dbUser == username && dbPassword == password)
                             {
                                 return true;
                             }
@@ -76,6 +76,48 @@ namespace ITS245_FinalProject
                 }
             }
             return false;
+        }
+
+        private void btnSelPat_Click(object sender, EventArgs e)
+        {
+            Form form = new Select_Patient();
+            this.Dispose();
+            form.ShowDialog();
+        }
+
+        private void btnPatientDem_Click(object sender, EventArgs e)
+        {
+            Form form = new PatientDemographics();
+            this.Dispose();
+            form.ShowDialog();
+        }
+
+        private void btnGenHist_Click(object sender, EventArgs e)
+        {
+            Form form = new GeneralHistory();
+            this.Dispose();
+            form.ShowDialog();
+        }
+
+        private void btnAllergy_Click(object sender, EventArgs e)
+        {
+            Form form = new AllergyHistory();
+            this.Dispose();
+            form.ShowDialog();
+        }
+
+        private void btnFamily_Click(object sender, EventArgs e)
+        {
+            Form form = new FamilyHistory();
+            this.Dispose();
+            form.ShowDialog();
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            Form form = new Login();
+            this.Dispose();
+            form.ShowDialog();
         }
     }
 }
