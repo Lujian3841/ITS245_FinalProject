@@ -92,7 +92,7 @@
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(40, 161);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(394, 33);
+            this.button3.Size = new System.Drawing.Size(413, 33);
             this.button3.TabIndex = 6;
             this.button3.Text = "Select Patient";
             this.button3.UseVisualStyleBackColor = true;
@@ -103,7 +103,7 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(40, 93);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(394, 33);
+            this.button1.Size = new System.Drawing.Size(413, 33);
             this.button1.TabIndex = 5;
             this.button1.Text = "Select Patient";
             this.button1.UseVisualStyleBackColor = true;
@@ -111,16 +111,16 @@
             // 
             // selLastName
             // 
-            this.selLastName.Location = new System.Drawing.Point(325, 133);
+            this.selLastName.Location = new System.Drawing.Point(345, 133);
             this.selLastName.Name = "selLastName";
-            this.selLastName.Size = new System.Drawing.Size(109, 22);
+            this.selLastName.Size = new System.Drawing.Size(108, 22);
             this.selLastName.TabIndex = 4;
             // 
             // txtPID
             // 
-            this.txtPID.Location = new System.Drawing.Point(325, 65);
+            this.txtPID.Location = new System.Drawing.Point(345, 65);
             this.txtPID.Name = "txtPID";
-            this.txtPID.Size = new System.Drawing.Size(109, 22);
+            this.txtPID.Size = new System.Drawing.Size(108, 22);
             this.txtPID.TabIndex = 3;
             // 
             // label3

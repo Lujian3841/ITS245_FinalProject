@@ -326,7 +326,7 @@ namespace ITS245_FinalProject
 
                     using (MySqlCommand cmd = new MySqlCommand(query, conn))
                     {
-                        cmd.Parameters.AddWithValue("@pid", familyListBox.SelectedItem);
+                        cmd.Parameters.AddWithValue("@fid", familyListBox.SelectedItem);
                         cmd.ExecuteNonQuery();
                     }
 
