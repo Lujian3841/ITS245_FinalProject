@@ -194,7 +194,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(394, 64);
             this.button4.TabIndex = 12;
-            this.button4.Text = "Gell All Patients";
+            this.button4.Text = "Gell All Allergys";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
