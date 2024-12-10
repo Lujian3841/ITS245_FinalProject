@@ -61,6 +61,7 @@
             this.btnRelation = new System.Windows.Forms.Button();
             this.btnDisorder = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -371,7 +372,7 @@
             // 
             this.btnRelation.Location = new System.Drawing.Point(27, 88);
             this.btnRelation.Name = "btnRelation";
-            this.btnRelation.Size = new System.Drawing.Size(95, 41);
+            this.btnRelation.Size = new System.Drawing.Size(95, 51);
             this.btnRelation.TabIndex = 65;
             this.btnRelation.Text = "Relation Data";
             this.btnRelation.UseVisualStyleBackColor = true;
@@ -381,7 +382,7 @@
             // 
             this.btnDisorder.Location = new System.Drawing.Point(27, 145);
             this.btnDisorder.Name = "btnDisorder";
-            this.btnDisorder.Size = new System.Drawing.Size(95, 41);
+            this.btnDisorder.Size = new System.Drawing.Size(95, 46);
             this.btnDisorder.TabIndex = 66;
             this.btnDisorder.Text = "Disorder Data";
             this.btnDisorder.UseVisualStyleBackColor = true;
@@ -390,6 +391,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.LightSlateGray;
+            this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.comboPatID);
             this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.btnDisorder);
@@ -412,6 +414,15 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(887, 327);
             this.panel3.TabIndex = 67;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(114, 58);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(63, 16);
+            this.label8.TabIndex = 67;
+            this.label8.Text = "Family ID";
             // 
             // FamilyHistory
             // 
@@ -468,5 +479,6 @@
         private System.Windows.Forms.Button btnRelation;
         private System.Windows.Forms.Button btnDisorder;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label8;
     }
 }
