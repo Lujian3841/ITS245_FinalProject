@@ -296,5 +296,10 @@ namespace ITS245_FinalProject
             this.Hide();
             frm1.ShowDialog();
         }
+
+        public  AllergyHistory()
+        {
+            InitializeComponent();
+        }
     }
     }

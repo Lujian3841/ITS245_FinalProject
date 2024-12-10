@@ -157,6 +157,7 @@
             this.btnLogin.TabIndex = 6;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // btnSelPat
             // 
@@ -167,6 +168,7 @@
             this.btnSelPat.TabIndex = 0;
             this.btnSelPat.Text = "Select Patient";
             this.btnSelPat.UseVisualStyleBackColor = true;
+            this.btnSelPat.Click += new System.EventHandler(this.btnSelPat_Click);
             // 
             // btnFamily
             // 
@@ -177,6 +179,7 @@
             this.btnFamily.TabIndex = 3;
             this.btnFamily.Text = "Family History";
             this.btnFamily.UseVisualStyleBackColor = true;
+            this.btnFamily.Click += new System.EventHandler(this.btnFamily_Click);
             // 
             // btnPatientDem
             // 
@@ -187,6 +190,7 @@
             this.btnPatientDem.TabIndex = 2;
             this.btnPatientDem.Text = "Patient Demographics";
             this.btnPatientDem.UseVisualStyleBackColor = true;
+            this.btnPatientDem.Click += new System.EventHandler(this.btnPatientDem_Click);
             // 
             // btnGenHist
             // 
@@ -197,6 +201,7 @@
             this.btnGenHist.TabIndex = 4;
             this.btnGenHist.Text = "General Medical History";
             this.btnGenHist.UseVisualStyleBackColor = true;
+            this.btnGenHist.Click += new System.EventHandler(this.btnGenHist_Click);
             // 
             // btnAllergy
             // 
@@ -207,6 +212,7 @@
             this.btnAllergy.TabIndex = 5;
             this.btnAllergy.Text = "Allergy History";
             this.btnAllergy.UseVisualStyleBackColor = true;
+            this.btnAllergy.Click += new System.EventHandler(this.btnAllergy_Click);
             // 
             // label3
             // 

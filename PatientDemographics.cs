@@ -65,6 +65,11 @@ namespace ITS245_FinalProject
             }
         }
 
+        public PatientDemographics()
+        {
+            InitializeComponent();
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
             Select_Patient frm1 = new Select_Patient();

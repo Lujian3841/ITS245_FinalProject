@@ -58,12 +58,12 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtDisorderType = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.comboFamID = new System.Windows.Forms.ComboBox();
             this.btnRelation = new System.Windows.Forms.Button();
             this.btnDisorder = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -76,7 +76,7 @@
             this.panel1.Controls.Add(this.btnPatientDem);
             this.panel1.Controls.Add(this.btnGenHist);
             this.panel1.Controls.Add(this.btnAllergy);
-            this.panel1.Location = new System.Drawing.Point(233, 12);
+            this.panel1.Location = new System.Drawing.Point(130, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(816, 105);
             this.panel1.TabIndex = 8;
@@ -101,6 +101,7 @@
             this.btnLogin.TabIndex = 6;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // btnSelPat
             // 
@@ -111,6 +112,7 @@
             this.btnSelPat.TabIndex = 0;
             this.btnSelPat.Text = "Select Patient";
             this.btnSelPat.UseVisualStyleBackColor = true;
+            this.btnSelPat.Click += new System.EventHandler(this.btnSelPat_Click);
             // 
             // btnFamily
             // 
@@ -121,6 +123,7 @@
             this.btnFamily.TabIndex = 3;
             this.btnFamily.Text = "Family History";
             this.btnFamily.UseVisualStyleBackColor = true;
+            this.btnFamily.Click += new System.EventHandler(this.btnFamily_Click);
             // 
             // btnPatientDem
             // 
@@ -131,6 +134,7 @@
             this.btnPatientDem.TabIndex = 2;
             this.btnPatientDem.Text = "Patient Demographics";
             this.btnPatientDem.UseVisualStyleBackColor = true;
+            this.btnPatientDem.Click += new System.EventHandler(this.btnPatientDem_Click);
             // 
             // btnGenHist
             // 
@@ -141,6 +145,7 @@
             this.btnGenHist.TabIndex = 4;
             this.btnGenHist.Text = "General Medical History";
             this.btnGenHist.UseVisualStyleBackColor = true;
+            this.btnGenHist.Click += new System.EventHandler(this.btnGenHist_Click);
             // 
             // btnAllergy
             // 
@@ -151,6 +156,7 @@
             this.btnAllergy.TabIndex = 5;
             this.btnAllergy.Text = "Allergy History";
             this.btnAllergy.UseVisualStyleBackColor = true;
+            this.btnAllergy.Click += new System.EventHandler(this.btnAllergy_Click);
             // 
             // panel2
             // 
@@ -160,7 +166,7 @@
             this.panel2.Controls.Add(this.btnModify);
             this.panel2.Controls.Add(this.btnDel);
             this.panel2.Controls.Add(this.btnSave);
-            this.panel2.Location = new System.Drawing.Point(294, 560);
+            this.panel2.Location = new System.Drawing.Point(194, 453);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(684, 55);
             this.panel2.TabIndex = 7;
@@ -174,6 +180,7 @@
             this.btnAdd.TabIndex = 0;
             this.btnAdd.Text = "ADD";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnUndo
             // 
@@ -184,6 +191,7 @@
             this.btnUndo.TabIndex = 3;
             this.btnUndo.Text = "UNDO";
             this.btnUndo.UseVisualStyleBackColor = true;
+            this.btnUndo.Click += new System.EventHandler(this.btnUndo_Click);
             // 
             // btnModify
             // 
@@ -194,6 +202,7 @@
             this.btnModify.TabIndex = 2;
             this.btnModify.Text = "MODIFY";
             this.btnModify.UseVisualStyleBackColor = true;
+            this.btnModify.Click += new System.EventHandler(this.btnModify_Click);
             // 
             // btnDel
             // 
@@ -204,6 +213,7 @@
             this.btnDel.TabIndex = 4;
             this.btnDel.Text = "DELETE";
             this.btnDel.UseVisualStyleBackColor = true;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
             // btnSave
             // 
@@ -214,20 +224,22 @@
             this.btnSave.TabIndex = 5;
             this.btnSave.Text = "SAVE";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // familyListBox
             // 
             this.familyListBox.FormattingEnabled = true;
             this.familyListBox.ItemHeight = 16;
-            this.familyListBox.Location = new System.Drawing.Point(570, 123);
+            this.familyListBox.Location = new System.Drawing.Point(128, 88);
             this.familyListBox.Name = "familyListBox";
-            this.familyListBox.Size = new System.Drawing.Size(130, 116);
+            this.familyListBox.Size = new System.Drawing.Size(30, 164);
             this.familyListBox.TabIndex = 9;
+            this.familyListBox.SelectedValueChanged += new System.EventHandler(this.familyListBox_SelectedValueChanged);
             // 
             // comboPatID
             // 
             this.comboPatID.FormattingEnabled = true;
-            this.comboPatID.Location = new System.Drawing.Point(314, 159);
+            this.comboPatID.Location = new System.Drawing.Point(102, 12);
             this.comboPatID.Name = "comboPatID";
             this.comboPatID.Size = new System.Drawing.Size(87, 24);
             this.comboPatID.TabIndex = 50;
@@ -236,7 +248,7 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Bahnschrift Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(233, 156);
+            this.label2.Location = new System.Drawing.Point(15, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(72, 29);
             this.label2.TabIndex = 49;
@@ -246,16 +258,16 @@
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Bahnschrift Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(291, 270);
+            this.label3.Location = new System.Drawing.Point(244, 88);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 36);
+            this.label3.Size = new System.Drawing.Size(60, 36);
             this.label3.TabIndex = 52;
             this.label3.Text = "Name:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(341, 277);
+            this.txtName.Location = new System.Drawing.Point(310, 95);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(161, 22);
             this.txtName.TabIndex = 51;
@@ -263,16 +275,16 @@
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Bahnschrift Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(275, 302);
+            this.label4.Location = new System.Drawing.Point(237, 132);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 36);
+            this.label4.Size = new System.Drawing.Size(74, 36);
             this.label4.TabIndex = 54;
             this.label4.Text = "Relation:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtRelation
             // 
-            this.txtRelation.Location = new System.Drawing.Point(341, 309);
+            this.txtRelation.Location = new System.Drawing.Point(310, 139);
             this.txtRelation.Name = "txtRelation";
             this.txtRelation.Size = new System.Drawing.Size(161, 22);
             this.txtRelation.TabIndex = 53;
@@ -280,16 +292,16 @@
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Bahnschrift Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(291, 330);
+            this.label5.Location = new System.Drawing.Point(240, 171);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 36);
+            this.label5.Size = new System.Drawing.Size(64, 36);
             this.label5.TabIndex = 56;
             this.label5.Text = "Alive:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtAlive
             // 
-            this.txtAlive.Location = new System.Drawing.Point(341, 337);
+            this.txtAlive.Location = new System.Drawing.Point(310, 178);
             this.txtAlive.Name = "txtAlive";
             this.txtAlive.Size = new System.Drawing.Size(161, 22);
             this.txtAlive.TabIndex = 55;
@@ -297,16 +309,16 @@
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Bahnschrift Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(272, 363);
+            this.label6.Location = new System.Drawing.Point(219, 218);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(70, 59);
+            this.label6.Size = new System.Drawing.Size(88, 44);
             this.label6.TabIndex = 58;
             this.label6.Text = "Lives With Patient:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtLivesWPat
             // 
-            this.txtLivesWPat.Location = new System.Drawing.Point(341, 381);
+            this.txtLivesWPat.Location = new System.Drawing.Point(310, 230);
             this.txtLivesWPat.Name = "txtLivesWPat";
             this.txtLivesWPat.Size = new System.Drawing.Size(161, 22);
             this.txtLivesWPat.TabIndex = 57;
@@ -314,16 +326,16 @@
             // label7
             // 
             this.label7.Font = new System.Drawing.Font("Bahnschrift Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(691, 295);
+            this.label7.Location = new System.Drawing.Point(495, 113);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(66, 36);
+            this.label7.Size = new System.Drawing.Size(81, 36);
             this.label7.TabIndex = 60;
             this.label7.Text = "Major Disorder:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtDisorder
             // 
-            this.txtDisorder.Location = new System.Drawing.Point(763, 302);
+            this.txtDisorder.Location = new System.Drawing.Point(595, 120);
             this.txtDisorder.Name = "txtDisorder";
             this.txtDisorder.Size = new System.Drawing.Size(161, 22);
             this.txtDisorder.TabIndex = 59;
@@ -331,51 +343,33 @@
             // label9
             // 
             this.label9.Font = new System.Drawing.Font("Bahnschrift Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(673, 340);
+            this.label9.Location = new System.Drawing.Point(492, 178);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(91, 36);
             this.label9.TabIndex = 62;
-            this.label9.Text = "Specific Type Disorder";
+            this.label9.Text = "Specific Type Disorder:";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtDisorderType
             // 
-            this.txtDisorderType.Location = new System.Drawing.Point(763, 347);
+            this.txtDisorderType.Location = new System.Drawing.Point(595, 185);
             this.txtDisorderType.Name = "txtDisorderType";
             this.txtDisorderType.Size = new System.Drawing.Size(161, 22);
             this.txtDisorderType.TabIndex = 61;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(534, 506);
+            this.button1.Location = new System.Drawing.Point(27, 197);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(192, 48);
+            this.button1.Size = new System.Drawing.Size(95, 55);
             this.button1.TabIndex = 64;
-            this.button1.Text = "Populate Information";
+            this.button1.Text = "Populate All Information";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label8
-            // 
-            this.label8.Font = new System.Drawing.Font("Bahnschrift Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(233, 124);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(75, 36);
-            this.label8.TabIndex = 32;
-            this.label8.Text = "FamilyID:";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // comboFamID
-            // 
-            this.comboFamID.FormattingEnabled = true;
-            this.comboFamID.Location = new System.Drawing.Point(314, 129);
-            this.comboFamID.Name = "comboFamID";
-            this.comboFamID.Size = new System.Drawing.Size(87, 24);
-            this.comboFamID.TabIndex = 63;
-            // 
             // btnRelation
             // 
-            this.btnRelation.Location = new System.Drawing.Point(706, 142);
+            this.btnRelation.Location = new System.Drawing.Point(27, 88);
             this.btnRelation.Name = "btnRelation";
             this.btnRelation.Size = new System.Drawing.Size(95, 41);
             this.btnRelation.TabIndex = 65;
@@ -385,7 +379,7 @@
             // 
             // btnDisorder
             // 
-            this.btnDisorder.Location = new System.Drawing.Point(706, 189);
+            this.btnDisorder.Location = new System.Drawing.Point(27, 145);
             this.btnDisorder.Name = "btnDisorder";
             this.btnDisorder.Size = new System.Drawing.Size(95, 41);
             this.btnDisorder.TabIndex = 66;
@@ -393,32 +387,39 @@
             this.btnDisorder.UseVisualStyleBackColor = true;
             this.btnDisorder.Click += new System.EventHandler(this.btnDisorder_Click);
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.LightSlateGray;
+            this.panel3.Controls.Add(this.comboPatID);
+            this.panel3.Controls.Add(this.button1);
+            this.panel3.Controls.Add(this.btnDisorder);
+            this.panel3.Controls.Add(this.label9);
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.txtDisorderType);
+            this.panel3.Controls.Add(this.btnRelation);
+            this.panel3.Controls.Add(this.label7);
+            this.panel3.Controls.Add(this.familyListBox);
+            this.panel3.Controls.Add(this.txtDisorder);
+            this.panel3.Controls.Add(this.txtLivesWPat);
+            this.panel3.Controls.Add(this.label6);
+            this.panel3.Controls.Add(this.txtName);
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.txtRelation);
+            this.panel3.Controls.Add(this.txtAlive);
+            this.panel3.Controls.Add(this.label4);
+            this.panel3.Location = new System.Drawing.Point(95, 123);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(887, 327);
+            this.panel3.TabIndex = 67;
+            // 
             // FamilyHistory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(1233, 622);
-            this.Controls.Add(this.btnDisorder);
-            this.Controls.Add(this.btnRelation);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboFamID);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.txtDisorderType);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.txtDisorder);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtLivesWPat);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtAlive);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtRelation);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtName);
-            this.Controls.Add(this.comboPatID);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.familyListBox);
+            this.ClientSize = new System.Drawing.Size(1052, 523);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Name = "FamilyHistory";
@@ -426,8 +427,9 @@
             this.Load += new System.EventHandler(this.FamilyHistory_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -463,9 +465,8 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtDisorderType;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboFamID;
         private System.Windows.Forms.Button btnRelation;
         private System.Windows.Forms.Button btnDisorder;
+        private System.Windows.Forms.Panel panel3;
     }
 }
