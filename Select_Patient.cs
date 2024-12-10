@@ -44,7 +44,7 @@ namespace ITS245_FinalProject
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("DB Operation failed to Patient Table", ex.Message);
+                    MessageBox.Show("DB Operation failed to insert on patient Table", ex.Message);
                 }
             }
         }
@@ -144,7 +144,7 @@ namespace ITS245_FinalProject
 
         private void button9_Click(object sender, EventArgs e)
         {
-            GeneralHistory frm1 = new GeneralHistory(pid);
+            GeneralHistory frm1 = new GeneralHistory();
             this.Hide();
             frm1.ShowDialog();
         }
@@ -158,7 +158,7 @@ namespace ITS245_FinalProject
 
         private void button7_Click(object sender, EventArgs e)
         {
-            FamilyHistory frm1 = new FamilyHistory(pid);
+            FamilyHistory frm1 = new FamilyHistory();
             this.Hide();
             frm1.ShowDialog();
         }
