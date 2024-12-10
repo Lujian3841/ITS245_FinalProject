@@ -30,19 +30,19 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.button11 = new System.Windows.Forms.Button();
+            this.btn_login = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
+            this.btn_famHist = new System.Windows.Forms.Button();
+            this.btn_demo = new System.Windows.Forms.Button();
+            this.btn_genHist = new System.Windows.Forms.Button();
+            this.btn_allergyHist = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_add = new System.Windows.Forms.Button();
             this.btn_undo = new System.Windows.Forms.Button();
             this.btn_modify = new System.Windows.Forms.Button();
             this.btn_delete = new System.Windows.Forms.Button();
             this.btn_save = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.pnl_main = new System.Windows.Forms.Panel();
             this.txt_pid = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
@@ -99,21 +99,23 @@
             this.txt_emnum = new System.Windows.Forms.TextBox();
             this.txt_pnum = new System.Windows.Forms.TextBox();
             this.txt_mr = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.txt_zip = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.pnl_main.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.button11);
+            this.panel1.Controls.Add(this.btn_login);
             this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button7);
-            this.panel1.Controls.Add(this.button8);
-            this.panel1.Controls.Add(this.button9);
-            this.panel1.Controls.Add(this.button10);
+            this.panel1.Controls.Add(this.btn_famHist);
+            this.panel1.Controls.Add(this.btn_demo);
+            this.panel1.Controls.Add(this.btn_genHist);
+            this.panel1.Controls.Add(this.btn_allergyHist);
             this.panel1.Location = new System.Drawing.Point(276, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(816, 105);
@@ -129,15 +131,16 @@
             this.label1.Text = "Patient Display";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button11
+            // btn_login
             // 
-            this.button11.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.Location = new System.Drawing.Point(683, 3);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(130, 50);
-            this.button11.TabIndex = 6;
-            this.button11.Text = "Login";
-            this.button11.UseVisualStyleBackColor = true;
+            this.btn_login.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_login.Location = new System.Drawing.Point(683, 3);
+            this.btn_login.Name = "btn_login";
+            this.btn_login.Size = new System.Drawing.Size(130, 50);
+            this.btn_login.TabIndex = 6;
+            this.btn_login.Text = "Login";
+            this.btn_login.UseVisualStyleBackColor = true;
+            this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
             // 
             // button2
             // 
@@ -150,46 +153,49 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button7
+            // btn_famHist
             // 
-            this.button7.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(547, 3);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(130, 50);
-            this.button7.TabIndex = 3;
-            this.button7.Text = "Family History";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btn_famHist.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_famHist.Location = new System.Drawing.Point(547, 3);
+            this.btn_famHist.Name = "btn_famHist";
+            this.btn_famHist.Size = new System.Drawing.Size(130, 50);
+            this.btn_famHist.TabIndex = 3;
+            this.btn_famHist.Text = "Family History";
+            this.btn_famHist.UseVisualStyleBackColor = true;
+            this.btn_famHist.Click += new System.EventHandler(this.btn_famHist_Click);
             // 
-            // button8
+            // btn_demo
             // 
-            this.button8.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(139, 3);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(130, 50);
-            this.button8.TabIndex = 2;
-            this.button8.Text = "Patient Demographics";
-            this.button8.UseVisualStyleBackColor = true;
+            this.btn_demo.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_demo.Location = new System.Drawing.Point(139, 3);
+            this.btn_demo.Name = "btn_demo";
+            this.btn_demo.Size = new System.Drawing.Size(130, 50);
+            this.btn_demo.TabIndex = 2;
+            this.btn_demo.Text = "Patient Demographics";
+            this.btn_demo.UseVisualStyleBackColor = true;
+            this.btn_demo.Click += new System.EventHandler(this.btn_demo_Click);
             // 
-            // button9
+            // btn_genHist
             // 
-            this.button9.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(275, 3);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(130, 50);
-            this.button9.TabIndex = 4;
-            this.button9.Text = "General Medical History";
-            this.button9.UseVisualStyleBackColor = true;
+            this.btn_genHist.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_genHist.Location = new System.Drawing.Point(275, 3);
+            this.btn_genHist.Name = "btn_genHist";
+            this.btn_genHist.Size = new System.Drawing.Size(130, 50);
+            this.btn_genHist.TabIndex = 4;
+            this.btn_genHist.Text = "General Medical History";
+            this.btn_genHist.UseVisualStyleBackColor = true;
+            this.btn_genHist.Click += new System.EventHandler(this.btn_genHist_Click);
             // 
-            // button10
+            // btn_allergyHist
             // 
-            this.button10.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Location = new System.Drawing.Point(411, 3);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(130, 50);
-            this.button10.TabIndex = 5;
-            this.button10.Text = "Allergy History";
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
+            this.btn_allergyHist.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_allergyHist.Location = new System.Drawing.Point(411, 3);
+            this.btn_allergyHist.Name = "btn_allergyHist";
+            this.btn_allergyHist.Size = new System.Drawing.Size(130, 50);
+            this.btn_allergyHist.TabIndex = 5;
+            this.btn_allergyHist.Text = "Allergy History";
+            this.btn_allergyHist.UseVisualStyleBackColor = true;
+            this.btn_allergyHist.Click += new System.EventHandler(this.button10_Click);
             // 
             // panel2
             // 
@@ -217,6 +223,7 @@
             // 
             // btn_undo
             // 
+            this.btn_undo.Enabled = false;
             this.btn_undo.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_undo.Location = new System.Drawing.Point(547, 3);
             this.btn_undo.Name = "btn_undo";
@@ -224,6 +231,7 @@
             this.btn_undo.TabIndex = 3;
             this.btn_undo.Text = "UNDO";
             this.btn_undo.UseVisualStyleBackColor = true;
+            this.btn_undo.Click += new System.EventHandler(this.btn_undo_Click);
             // 
             // btn_modify
             // 
@@ -234,6 +242,7 @@
             this.btn_modify.TabIndex = 2;
             this.btn_modify.Text = "MODIFY";
             this.btn_modify.UseVisualStyleBackColor = true;
+            this.btn_modify.Click += new System.EventHandler(this.btn_modify_Click);
             // 
             // btn_delete
             // 
@@ -244,9 +253,11 @@
             this.btn_delete.TabIndex = 4;
             this.btn_delete.Text = "DELETE";
             this.btn_delete.UseVisualStyleBackColor = true;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // btn_save
             // 
+            this.btn_save.Enabled = false;
             this.btn_save.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_save.Location = new System.Drawing.Point(411, 3);
             this.btn_save.Name = "btn_save";
@@ -254,70 +265,73 @@
             this.btn_save.TabIndex = 5;
             this.btn_save.Text = "SAVE";
             this.btn_save.UseVisualStyleBackColor = true;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
-            // panel3
+            // pnl_main
             // 
-            this.panel3.BackColor = System.Drawing.Color.AliceBlue;
-            this.panel3.Controls.Add(this.txt_pid);
-            this.panel3.Controls.Add(this.label27);
-            this.panel3.Controls.Add(this.label28);
-            this.panel3.Controls.Add(this.label29);
-            this.panel3.Controls.Add(this.txt_kinRelation);
-            this.panel3.Controls.Add(this.txt_kindID);
-            this.panel3.Controls.Add(this.txt_entered);
-            this.panel3.Controls.Add(this.label7);
-            this.panel3.Controls.Add(this.label25);
-            this.panel3.Controls.Add(this.label26);
-            this.panel3.Controls.Add(this.txt_comment);
-            this.panel3.Controls.Add(this.txt_hcp);
-            this.panel3.Controls.Add(this.txt_ref);
-            this.panel3.Controls.Add(this.txt_marital);
-            this.panel3.Controls.Add(this.label24);
-            this.panel3.Controls.Add(this.label23);
-            this.panel3.Controls.Add(this.label22);
-            this.panel3.Controls.Add(this.label21);
-            this.panel3.Controls.Add(this.label20);
-            this.panel3.Controls.Add(this.label19);
-            this.panel3.Controls.Add(this.label18);
-            this.panel3.Controls.Add(this.label17);
-            this.panel3.Controls.Add(this.label16);
-            this.panel3.Controls.Add(this.label15);
-            this.panel3.Controls.Add(this.label14);
-            this.panel3.Controls.Add(this.label13);
-            this.panel3.Controls.Add(this.label12);
-            this.panel3.Controls.Add(this.label11);
-            this.panel3.Controls.Add(this.label10);
-            this.panel3.Controls.Add(this.label9);
-            this.panel3.Controls.Add(this.label8);
-            this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.label5);
-            this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.txt_expire);
-            this.panel3.Controls.Add(this.txt_employment);
-            this.panel3.Controls.Add(this.txt_religion);
-            this.panel3.Controls.Add(this.txt_ssn);
-            this.panel3.Controls.Add(this.txt_citizenship);
-            this.panel3.Controls.Add(this.txt_country);
-            this.panel3.Controls.Add(this.txt_state);
-            this.panel3.Controls.Add(this.txt_ethnic);
-            this.panel3.Controls.Add(this.txt_gender);
-            this.panel3.Controls.Add(this.txt_dob);
-            this.panel3.Controls.Add(this.txt_city);
-            this.panel3.Controls.Add(this.txt_address);
-            this.panel3.Controls.Add(this.txt_suffix);
-            this.panel3.Controls.Add(this.txt_mi);
-            this.panel3.Controls.Add(this.txt_lname);
-            this.panel3.Controls.Add(this.txt_fname);
-            this.panel3.Controls.Add(this.txt_email);
-            this.panel3.Controls.Add(this.txt_emnum);
-            this.panel3.Controls.Add(this.txt_pnum);
-            this.panel3.Controls.Add(this.txt_mr);
-            this.panel3.Location = new System.Drawing.Point(84, 118);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1192, 422);
-            this.panel3.TabIndex = 13;
+            this.pnl_main.BackColor = System.Drawing.Color.AliceBlue;
+            this.pnl_main.Controls.Add(this.label30);
+            this.pnl_main.Controls.Add(this.txt_zip);
+            this.pnl_main.Controls.Add(this.txt_pid);
+            this.pnl_main.Controls.Add(this.label27);
+            this.pnl_main.Controls.Add(this.label28);
+            this.pnl_main.Controls.Add(this.label29);
+            this.pnl_main.Controls.Add(this.txt_kinRelation);
+            this.pnl_main.Controls.Add(this.txt_kindID);
+            this.pnl_main.Controls.Add(this.txt_entered);
+            this.pnl_main.Controls.Add(this.label7);
+            this.pnl_main.Controls.Add(this.label25);
+            this.pnl_main.Controls.Add(this.label26);
+            this.pnl_main.Controls.Add(this.txt_comment);
+            this.pnl_main.Controls.Add(this.txt_hcp);
+            this.pnl_main.Controls.Add(this.txt_ref);
+            this.pnl_main.Controls.Add(this.txt_marital);
+            this.pnl_main.Controls.Add(this.label24);
+            this.pnl_main.Controls.Add(this.label23);
+            this.pnl_main.Controls.Add(this.label22);
+            this.pnl_main.Controls.Add(this.label21);
+            this.pnl_main.Controls.Add(this.label20);
+            this.pnl_main.Controls.Add(this.label19);
+            this.pnl_main.Controls.Add(this.label18);
+            this.pnl_main.Controls.Add(this.label17);
+            this.pnl_main.Controls.Add(this.label16);
+            this.pnl_main.Controls.Add(this.label15);
+            this.pnl_main.Controls.Add(this.label14);
+            this.pnl_main.Controls.Add(this.label13);
+            this.pnl_main.Controls.Add(this.label12);
+            this.pnl_main.Controls.Add(this.label11);
+            this.pnl_main.Controls.Add(this.label10);
+            this.pnl_main.Controls.Add(this.label9);
+            this.pnl_main.Controls.Add(this.label8);
+            this.pnl_main.Controls.Add(this.label6);
+            this.pnl_main.Controls.Add(this.label5);
+            this.pnl_main.Controls.Add(this.label4);
+            this.pnl_main.Controls.Add(this.label2);
+            this.pnl_main.Controls.Add(this.label3);
+            this.pnl_main.Controls.Add(this.txt_expire);
+            this.pnl_main.Controls.Add(this.txt_employment);
+            this.pnl_main.Controls.Add(this.txt_religion);
+            this.pnl_main.Controls.Add(this.txt_ssn);
+            this.pnl_main.Controls.Add(this.txt_citizenship);
+            this.pnl_main.Controls.Add(this.txt_country);
+            this.pnl_main.Controls.Add(this.txt_state);
+            this.pnl_main.Controls.Add(this.txt_ethnic);
+            this.pnl_main.Controls.Add(this.txt_gender);
+            this.pnl_main.Controls.Add(this.txt_dob);
+            this.pnl_main.Controls.Add(this.txt_city);
+            this.pnl_main.Controls.Add(this.txt_address);
+            this.pnl_main.Controls.Add(this.txt_suffix);
+            this.pnl_main.Controls.Add(this.txt_mi);
+            this.pnl_main.Controls.Add(this.txt_lname);
+            this.pnl_main.Controls.Add(this.txt_fname);
+            this.pnl_main.Controls.Add(this.txt_email);
+            this.pnl_main.Controls.Add(this.txt_emnum);
+            this.pnl_main.Controls.Add(this.txt_pnum);
+            this.pnl_main.Controls.Add(this.txt_mr);
+            this.pnl_main.Location = new System.Drawing.Point(84, 118);
+            this.pnl_main.Name = "pnl_main";
+            this.pnl_main.Size = new System.Drawing.Size(1192, 422);
+            this.pnl_main.TabIndex = 13;
             // 
             // txt_pid
             // 
@@ -797,21 +811,38 @@
             this.txt_mr.Size = new System.Drawing.Size(87, 22);
             this.txt_mr.TabIndex = 2;
             // 
+            // label30
+            // 
+            this.label30.Font = new System.Drawing.Font("Bahnschrift Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(523, 341);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(75, 36);
+            this.label30.TabIndex = 65;
+            this.label30.Text = "Zip Code: ";
+            this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txt_zip
+            // 
+            this.txt_zip.Location = new System.Drawing.Point(604, 348);
+            this.txt_zip.Name = "txt_zip";
+            this.txt_zip.Size = new System.Drawing.Size(87, 22);
+            this.txt_zip.TabIndex = 64;
+            // 
             // PatientDemographics
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(1359, 610);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.pnl_main);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "PatientDemographics";
             this.Text = "PatientDemographics";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.pnl_main.ResumeLayout(false);
+            this.pnl_main.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -820,19 +851,19 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button btn_login;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button btn_famHist;
+        private System.Windows.Forms.Button btn_demo;
+        private System.Windows.Forms.Button btn_genHist;
+        private System.Windows.Forms.Button btn_allergyHist;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btn_add;
         private System.Windows.Forms.Button btn_undo;
         private System.Windows.Forms.Button btn_modify;
         private System.Windows.Forms.Button btn_delete;
         private System.Windows.Forms.Button btn_save;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel pnl_main;
         private System.Windows.Forms.TextBox txt_marital;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label23;
@@ -889,5 +920,7 @@
         private System.Windows.Forms.TextBox txt_kindID;
         private System.Windows.Forms.TextBox txt_entered;
         private System.Windows.Forms.TextBox txt_pid;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.TextBox txt_zip;
     }
 }

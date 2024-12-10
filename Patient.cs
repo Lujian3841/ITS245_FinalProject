@@ -11,5 +11,7 @@ namespace ITS245_FinalProject
         public int PatientID { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        
+        
     }
 }
