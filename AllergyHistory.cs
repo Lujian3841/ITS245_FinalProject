@@ -234,6 +234,11 @@ namespace ITS245_FinalProject
                     MessageBox.Show("DB Operation failed to Patient Table", ex.Message);
                 }
             }
+            textBox2.Text = "";
+            textBox25.Text = "";
+            textBox27.Text = "";
+            textBox1.Text = "";
+            txt_allergen.Text = "";
         }
 
         private void button6_Click(object sender, EventArgs e)
