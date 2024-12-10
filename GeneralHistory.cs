@@ -51,6 +51,27 @@ namespace ITS245_FinalProject
             }
         }
 
+        public void patientLabel(int pid)
+        {
+
+            using (MySqlConnection conn = DBUtils.MakeConnection())
+            {
+                string query = "SELECT PtFirstName, PtLastName, PtMiddleInitial FROM patientdemographics WHERE PatientID = @pid and deleted = 0";
+
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@pid", pid);
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            label1.Text = reader["PtFirstName"].ToString() + " " + reader["PtMiddleInitial"].ToString() + " " + reader["PtLastName"].ToString();
+                        }
+                    }
+                }
+            }
+        }
+
         private void label3_Click(object sender, EventArgs e)
         {
 
@@ -134,6 +155,7 @@ namespace ITS245_FinalProject
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             pid = Convert.ToInt16(comboBox1.Text);
+            patientLabel(pid);
         }
 
         private void formMode()
