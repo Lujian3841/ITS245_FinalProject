@@ -439,14 +439,14 @@ namespace ITS245_FinalProject
 
         private void btn_genHist_Click(object sender, EventArgs e)
         {
-            GeneralHistory frm1 = new GeneralHistory();
+            GeneralHistory frm1 = new GeneralHistory(PID);
             this.Hide();
             frm1.ShowDialog();
         }
 
         private void btn_famHist_Click(object sender, EventArgs e)
         {
-            FamilyHistory frm1 = new FamilyHistory();
+            FamilyHistory frm1 = new FamilyHistory(PID);
             this.Hide();
             frm1.ShowDialog();
         }

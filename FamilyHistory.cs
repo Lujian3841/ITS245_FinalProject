@@ -90,6 +90,7 @@ namespace ITS245_FinalProject
                         MessageBox.Show("Error Populating ComboBox: " + ex);
                     }
                 }
+                patientLabel(pid);
             }
         }
 
@@ -215,6 +216,28 @@ namespace ITS245_FinalProject
 
         public void patientLabel()
         {
+
+            using (MySqlConnection conn = DBUtils.MakeConnection())
+            {
+                string query = "SELECT PtFirstName, PtLastName, PtMiddleInitial FROM patientdemographics WHERE PatientID = @pid and deleted = 0";
+
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@pid", pid);
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            label1.Text = reader["PtFirstName"].ToString() + " " + reader["PtMiddleInitial"].ToString() + " " + reader["PtLastName"].ToString();
+                        }
+                    }
+                }
+            }
+        }
+
+        public void patientLabel(string pid)
+        {
+
             using (MySqlConnection conn = DBUtils.MakeConnection())
             {
                 string query = "SELECT PtFirstName, PtLastName, PtMiddleInitial FROM patientdemographics WHERE PatientID = @pid and deleted = 0";
@@ -326,7 +349,7 @@ namespace ITS245_FinalProject
 
                     using (MySqlCommand cmd = new MySqlCommand(query, conn))
                     {
-                        cmd.Parameters.AddWithValue("@pid", familyListBox.SelectedItem);
+                        cmd.Parameters.AddWithValue("@fid", familyListBox.SelectedItem);
                         cmd.ExecuteNonQuery();
                     }
 
